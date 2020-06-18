@@ -98,8 +98,8 @@
   <p>
     If the box sizing is standard, the border is added to the width and height of the box. 
     If the box sizing is <em>border-box</em>, the border takes up the available width and height.<br> 
-    The border can be styled using <strong>border-width</strong>, <strong>border-style</strong> and 
-    <strong>border-color</strong>.
+    The border can be styled using <strong>border-width</strong>, <strong>border-style</strong>, 
+    <strong>border-color</strong> and <strong>border-radius</strong> to round off corners.
   </p>
   <h2>Padding:</h2>
   <p>
@@ -115,6 +115,47 @@
     <li>The width and height properties are respected;</li>
     <li>Vertical padding, borders and margins will push other elements away.</li>
   </ul>
+  <h1>Backgrounds and borders</h1>
+  <h2>Background color:</h2>
+  <p>
+    The <strong>background-color</strong> attribute gives the element's background a color. 
+  </p>
+  <h2>Background image:</h2>
+  <p>
+    The <strong>background-image</strong> attribute displays and image on the element's background.<br>
+    The <strong>background-repeat</strong> attribute controls the tiling behaviour of the image:
+    <ul>
+      <li><strong>background-repeat</strong>: <em>no-repeat</em> -- the background doesn't repeat;</li>
+      <li><strong>background-repeat</strong>: <em>repeat-x</em> -- repeats horizontally;</li>
+      <li><strong>background-repeat</strong>: <em>repeat-y</em> -- repeats vertically;</li>
+      <li><strong>background-repeat</strong>: <em>repeat</em> -- the default, repeats in both directions.</li>
+    </ul>
+    <p>
+      The <strong>background-size</strong> attribute controls the sizing of the image:
+    </p>
+    <ul>
+      <li><strong>background-size</strong>: <em>cover</em> -- completely covers the box (may end up cropped).</li>
+      <li><strong>background-size</strong>: <em>contain</em> -- fits inside the box (may cause gaps).</li>
+      <li>You can also use pixels or percentages.</li>
+    </ul>
+    <p>
+      The <strong>background-position</strong> attribute controls the position of the image. Use 
+      values like top, center or specify values to be applied to <var>x</var> and <var>y</var>, like 
+      <em>25% 75%</em>.
+    </p>
+    <p>
+      You can also use gradients for your background. Just use the <strong>background-image</strong> 
+      attribute and assign a gradient value to it, such as <em>linear-gradient(#f69d3c, #3f87a6)</em>.
+    </p>
+    <p>
+      The <strong>background-attachment</strong> attribute controls the image's behaviour when scrolling: 
+      <ul>
+        <li><strong>background-attachment</strong>: <em>scroll</em> -- scrolls with the page and the element.</li>
+        <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll.</li>
+        <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
+      </ul>
+    </p>
+  </p>
 
 
 
