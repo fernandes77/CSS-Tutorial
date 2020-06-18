@@ -4,8 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building Blocks</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  
+  <h1>Cascade and Inheritance</h1>
+  <h2>Cascade:</h2> If two rules are equal, the one that comes last is applied.
+  <h2>Specificity:</h2> The rule is applied if it is the most specific to that element.
+  <h2>Inheritance:</h2> Some properties set on parent elements are inherited by their child elements, 
+  and some aren't. For example, <strong>color</strong> is inherited, <strong>width</strong> is not.<br>
+  <p><strong>inherit:</strong> Turns inheritance on.</p>
+  <p><strong>initial:</strong> Turns inheritance off.</p>
+  <p><strong>unset:</strong> Resets to it's natural value, whether that is inherit or initial.</p><br>
+
+  <h1>Selectors</h1>
+  <h2>Type, class and ID:</h2> This group includes selectors that target an HTML element.<br>
+  Examples: h1{}, .a-class{}, #some-id{}.
+  <h2>Attribute:</h2> This group of selectors selects elements based on the presence of a 
+  certain attribute.<br>
+  Examples: a[title]{}, a[href="example.com"]{}.
+  <h2>Pseudo-class and pseudo-element:</h2> This group of selectors styles certain states 
+  or parts of an element.<br>
+  Examples: a:hover{}, p::first-line{}.
+  <h2>Combinator:</h2> This group of selectors combine other selectors in order to target elements
+  within our documents.<br>
+  Example: article > p{}.
+  <h2>Universal:</h2> This selects all elements: *{}
+  <h2>Descendant:</h2> The descendant combinator combines two selectors such that elements matched 
+  by the second selector are selected if they have an ancestor element matching the first selector.<br>
+  Examples: div li{}, p strong{}.
+  <h2>Adjacent sibling:</h2> This combinator matches the second element only if it immediately follows 
+  the first element.
+  Example: img + p{}.
+  <h2>General sibling:</h2> Same as the adjacent sibling combinator, but without the "immediately" part.<br>
+  Example: img ~ p{}.
+  <br><br>
+  <h1>The box model</h1>
+  <h2>Block boxes:</h2>
+  <ul>
+    <li>Will break onto a new line;</li>
+    <li>Will fill all of the space available in that line;</li>
+    <li>The <strong>width</strong> and <strong>height</strong> properties are respected;</li>
+    <li>Padding, margin and border will push other elements away from the box.</li>
+  </ul>
+  <h2>Inline boxes:</h2>
+  <ul>
+    <li>Will not break onto a new line;</li>
+    <li>The <strong>width</strong> and <strong>height</strong> properties are not respected;</li>
+    <li>
+      Vertical padding, margins and borders will apply but will not cause other inline boxes 
+      to move away from the box.
+    </li>
+    <li>
+      Horizontal padding, margins and borders will apply and will cause other inline boxes 
+      to move away from the box.
+    </li>
+  </ul>
+  <div class="block-box">BLOCK BOX</div>
+  <div class="inline-box">INLINE BOX</div>
+  <div class="inline-box">INLINE BOX</div>All of these boxes have: margin: 20px, padding: 10px.
+  <div class="block-box">BLOCK BOX</div>
+  <h2>Content box:</h2>
+  <p>
+    The area where the content is displayed. Can be changed using <strong>width</strong> and 
+    <strong>height</strong>.
+  </p>
+  <h2>Padding box:</h2>
+  <p>
+    The area that sits around the content. Can be changed using <strong>padding</strong>.
+  </p>
+  <h2>Border box:</h2>
+  <p>
+    The area that wraps content and padding. Can be changed using <strong>border</strong>.
+  </p>
+  <h2>Margin box</h2>
+  <p>
+    The area that wraps everything as whitespace between this element and other elements. 
+    Can be changed using <strong>margin</strong>.
+  </p>
+  <h2>Standard CSS box model:</h2>
+  <p>The size of the box is the size of the content box.</p>
+  <h2>Alternative CSS box model:</h2>
+  <p>
+    The size of the box is the size of the content, padding and margin boxes together.<br>
+    Set <strong>box-sizing:</strong> <em>border-box</em> to achieve this.
+  </p>
+  <h2>Margins:</h2>
+  <p>
+    If two margins collapse, the highest absolute value margin will be the one that's displayed. 
+    However, if one of them is positive and the other is negative, the displayed value will be 
+    the sum of the two.
+  </p>
+  <h2>Borders:</h2>
+  <p>
+    If the box sizing is standard, the border is added to the width and height of the box. 
+    If the box sizing is <em>border-box</em>, the border takes up the available width and height.<br> 
+    The border can be styled using <strong>border-width</strong>, <strong>border-style</strong> and 
+    <strong>border-color</strong>.
+  </p>
+  <h2>Padding:</h2>
+  <p>
+    Unlike margins, padding cannot be negative. If the box has a background, it will be displayed on 
+    the padding.
+  </p>
+  <h2>Display: inline-block</h2>
+  <p>
+    Using this <strong>display</strong> setting will give the box these properties:
+  </p>
+  <ul>
+    <li>The box will not break into another line;</li>
+    <li>The width and height properties are respected;</li>
+    <li>Vertical padding, borders and margins will push other elements away.</li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

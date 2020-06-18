@@ -1,0 +1,17 @@
+.block-box {
+  display: block;
+  background-color: blue;
+  width: 500px;
+  height: 100px;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+}
+
+.inline-box {
+  display: inline;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+}
