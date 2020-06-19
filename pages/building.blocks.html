@@ -316,7 +316,64 @@
     In programming, a function is a reusable section of code that can be run multiple times to complete a 
     repetitive task. Some examples are url("img.jpg") and calc(50% + 8px).
   </p>
+  <h1>Sizing items in CSS</h1>
+  <h2>Minimum and maximum sizes: min- and max-</h2>
+  <p>
+    You can ask CSS to give an element a minimum or a maximum size, using <strong>min-</strong> and 
+    <strong>max-</strong>.<br>
+    This is useful for preventing content overflow while having a defined height or width.
+  </p>
+  <div class="min-max"></div>
+  <div class="min-max"> 
+    These boxes both have a min-height set, this box has content in it which will need more space than the 
+    assigned height, and so it grows from the minimum.
+  </div>
+  <h2>Viewport units</h2>
+  <p>
+    The viewport — which is the visible area of your page in the browser you are using to view a site — 
+    also has a size. In CSS there is the <em>vw</em> unit for viewport width, and <em>vh</em> for viewport 
+    height. <br>Using these units you can size something relative to the viewport of the user.
+  </p>
+  <div class="viewport">Scale your window's width</div>
+  <h1>Images, media and form elements</h1>
+  <h2>Sizing images</h2>
+  <p>
+    Images can be sized with their aspect ratio maintained using the <strong>object-fit</strong> 
+    attribute.
+  </p>
+  <ul>
+    <li><strong>object-fit</strong>: <em>cover</em> -- covers the box entirely, may be cropped;</li>
+    <li><strong>object-fit</strong>: <em>contain</em> -- is contained inside the box, may leave gaps.</li>
+  </ul>
+  <div class="img">
+    <img src="../imgs/img1.png" alt="balloon" class="img-cover">
+  </div>
+  <div class="img">
+    <img src="../imgs/img1.png" alt="balloon" class="img-contain">
+  </div>
+  <h2>Form elements reset</h2>
+  <p>
+    Form elements can be a tricky issue when it comes to styling with CSS. They will most likely look 
+    different when displayed in different browsers. Therefore, there is a reset for them:
+    <pre>
+      <code>
+        button, 
+        input, 
+        select, 
+        textarea { 
+          font-family: inherit; 
+          font-size: 100%; 
+          box-sizing: border-box; 
+          padding: 0;
+          margin: 0; 
+        } 
 
+        textarea { 
+          overflow: auto; 
+        } 
+      </code>
+    </pre>
+  </p>
 
 
 
