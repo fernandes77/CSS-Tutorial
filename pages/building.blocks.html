@@ -141,8 +141,8 @@
     The <strong>background-size</strong> attribute controls the sizing of the image:
   </p>
   <ul>
-    <li><strong>background-size</strong>: <em>cover</em> -- completely covers the box (may end up cropped).</li>
-    <li><strong>background-size</strong>: <em>contain</em> -- fits inside the box (may cause gaps).</li>
+    <li><strong>background-size</strong>: <em>cover</em> -- completely covers the box (may end up cropped);</li>
+    <li><strong>background-size</strong>: <em>contain</em> -- fits inside the box (may cause gaps);</li>
     <li>You can also use pixels or percentages.</li>
   </ul>
   <div class="bg" id="bg-5"></div>
@@ -165,17 +165,129 @@
     The <strong>background-attachment</strong> attribute controls the image's behaviour when scrolling.
     Here's an
     <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">example</a>.
+  </p>
   <ul>
-    <li><strong>background-attachment</strong>: <em>scroll</em> -- scrolls with the page and the element.</li>
-    <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll.</li>
+    <li><strong>background-attachment</strong>: <em>scroll</em> -- scrolls with the page and the element;</li>
+    <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll;</li>
     <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
   </ul>
+  <h1>Text directions</h1>
+  <h2>Writing modes:</h2>
+  <p>
+    The <strong>writing-mode</strong> attribute allows for different writing directions.
   </p>
+  <ul>
+    <li><strong>writing-mode</strong>: <em>horizontal-tb</em> -- top-to-bottom block flow direction;</li>
+    <li><strong>writing-mode</strong>: <em>vertical-rl</em> -- right-to-left block flow direction;</li>
+    <li><strong>writing-mode</strong>: <em>vertical-lr</em> -- left-to-right block flow direction.</li>
+  </ul>
+  <div class="wrt-mode hor">Lorem ipsum dolor sit amet</div>
+  <div class="wrt-mode ver-rl">Lorem ipsum dolor sit amet</div>
+  <div class="wrt-mode ver-lr">Lorem ipsum dolor sit amet</div>
+  <h2>Width and height:</h2>
+  <p>
+    Width and height can be set based on the <strong>writing-mode</strong>. For that, just use the 
+    <strong>inline-size</strong> and <strong>block-size</strong> attributes.
   </p>
-
-
-
-
+  <div class="wrt-mode wrt-size hor">Lorem ipsum dolor sit amet</div>
+  <div class="wrt-mode wrt-size ver-rl">Lorem ipsum dolor sit amet</div>
+  <h2>Logical values:</h2>
+  <p>
+    Top, right, left and bottom values can also be set based on the <strong>writing-mode</strong>. 
+    Use the <strong>block-start</strong>, <strong>inline-end</strong>, <strong>block-end</strong> 
+    and <strong>inline-start</strong> attributes.
+  </p>
+  <div class="wrt-mode hor log-vals">Lorem ipsum dolor sit amet</div>
+  <div class="wrt-mode ver-rl log-vals">Lorem ipsum dolor sit amet</div>
+  <h1>Overflowing content</h1>
+  <h2>Overflow:</h2>
+  <p>
+    Content you put inside a box may be too big to fit inside it. The <strong>overflow</strong> attribute 
+    determines what to do in this situation.
+  </p>
+  <ul>
+    <li><strong>overflow:</strong> <em>hidden</em> -- hides the content;</li>
+    <li><strong>overflow:</strong> <em>scroll</em> -- adds scroll bars;</li>
+    <li><strong>overflow:</strong> <em>auto</em> -- if the content overflows, adds scroll bars;</li>
+    <li><strong>overflow-x</strong> and <strong>overflow-y</strong> can also be used.</li>
+  </ul>
+  <h1>CSS values and units</h1>
+  <h2>Data types:</h2>
+  <p>CSS has 4 data types:</p>
+  <ul>
+    <li>&lt;integer&gt;: a whole number such as 2048 or -125;</li>
+    <li>&lt;number&gt;: a decimal number, which may or may not have a fractional component, such as 0.225 or 64;</li>
+    <li>&lt;dimension&gt;: a &lt;number&gt; with a unit attached to it, such as 45deg, 16px or 5s;</li>
+    <li>&lt;percentage&gt;: represents a fraction of another value, such as 50%.</li>
+  </ul>
+  <h2>Lengths:</h2>
+  <p>CSS has absolute and relative length units:</p>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Unit</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cm</td> <td>Centimeters</td>
+        </tr>
+        <tr>
+          <td>mm</td> <td>Millimeters</td>
+        </tr>
+        <tr>
+          <td>Q</td> <td>Quarter-millimeters</td>
+        </tr>
+        <tr>
+          <td>in</td> <td>Inches</td>
+        </tr>
+        <tr>
+          <td>pc</td> <td>Picas</td>
+        </tr>
+        <tr>
+          <td>pt</td> <td>Points</td>
+        </tr>
+        <tr>
+          <td>px</td> <td>Pixels</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Unit</th>
+          <th>Relative to</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>em</td> <td>Font size of the parent, in the case of typographical properties.</td>
+        </tr>
+        <tr>
+          <td>ex</td> <td>x-height of the element's font.</td>
+        </tr>
+        <tr>
+          <td>rem</td> <td>Font size of the root element.</td>
+        </tr>
+        <tr>
+          <td>vw</td> <td>1% of the viewport's width.</td>
+        </tr>
+        <tr>
+          <td>vh</td> <td>1% of the viewport's height.</td>
+        </tr>
+        <tr>
+          <td>vmin</td> <td>1% of the viewport's smaller dimension.</td>
+        </tr>
+        <tr>
+          <td>vmax</td> <td>1% of the viewport's larger dimension.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 

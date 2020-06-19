@@ -76,3 +76,52 @@
 #bg-11 {
   background-image: linear-gradient(#f69d3c, #3f87a6);
 }
+
+.wrt-mode {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.hor {
+  writing-mode: horizontal-tb;
+}
+
+.ver-rl {
+  writing-mode: vertical-rl;
+}
+
+.ver-lr {
+  writing-mode: vertical-lr;
+}
+
+.wrt-size {
+  block-size: 200px;
+  inline-size: 100px;
+}
+
+.log-vals {
+  border: 5px black;
+  border-block-start-style: dashed;
+  border-inline-end-style: dotted;
+  border-block-end-style: double;
+  border-inline-start-style: solid;
+}
+
+.table {
+  display: inline-block;
+}
+
+table {
+  font-size: 24px;
+  border-collapse: collapse;
+  margin-left: 24px;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.4rem;
+  text-align: left;
+}
