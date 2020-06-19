@@ -10,45 +10,45 @@
 
 <body>
   <h1>Cascade and Inheritance</h1>
-  <h2>Cascade:</h2> If two rules are equal, the one that comes last is applied.
-  <h2>Specificity:</h2> The rule is applied if it is the most specific to that element.
-  <h2>Inheritance:</h2> Some properties set on parent elements are inherited by their child elements,
+  <h2>Cascade</h2> If two rules are equal, the one that comes last is applied.
+  <h2>Specificity</h2> The rule is applied if it is the most specific to that element.
+  <h2>Inheritance</h2> Some properties set on parent elements are inherited by their child elements,
   and some aren't. For example, <strong>color</strong> is inherited, <strong>width</strong> is not.<br>
   <p><strong>inherit:</strong> Turns inheritance on.</p>
   <p><strong>initial:</strong> Turns inheritance off.</p>
   <p><strong>unset:</strong> Resets to it's natural value, whether that is inherit or initial.</p><br>
 
   <h1>Selectors</h1>
-  <h2>Type, class and ID:</h2> This group includes selectors that target an HTML element.<br>
+  <h2>Type, class and ID</h2> This group includes selectors that target an HTML element.<br>
   Examples: h1{}, .a-class{}, #some-id{}.
-  <h2>Attribute:</h2> This group of selectors selects elements based on the presence of a
+  <h2>Attribute</h2> This group of selectors selects elements based on the presence of a
   certain attribute.<br>
   Examples: a[title]{}, a[href="example.com"]{}.
-  <h2>Pseudo-class and pseudo-element:</h2> This group of selectors styles certain states
+  <h2>Pseudo-class and pseudo-element</h2> This group of selectors styles certain states
   or parts of an element.<br>
   Examples: a:hover{}, p::first-line{}.
-  <h2>Combinator:</h2> This group of selectors combine other selectors in order to target elements
+  <h2>Combinator</h2> This group of selectors combine other selectors in order to target elements
   within our documents.<br>
   Example: article > p{}.
-  <h2>Universal:</h2> This selects all elements: *{}
-  <h2>Descendant:</h2> The descendant combinator combines two selectors such that elements matched
+  <h2>Universal</h2> This selects all elements: *{}
+  <h2>Descendant</h2> The descendant combinator combines two selectors such that elements matched
   by the second selector are selected if they have an ancestor element matching the first selector.<br>
   Examples: div li{}, p strong{}.
-  <h2>Adjacent sibling:</h2> This combinator matches the second element only if it immediately follows
+  <h2>Adjacent sibling</h2> This combinator matches the second element only if it immediately follows
   the first element.
   Example: img + p{}.
-  <h2>General sibling:</h2> Same as the adjacent sibling combinator, but without the "immediately" part.<br>
+  <h2>General sibling</h2> Same as the adjacent sibling combinator, but without the "immediately" part.<br>
   Example: img ~ p{}.
   <br><br>
   <h1>The box model</h1>
-  <h2>Block boxes:</h2>
+  <h2>Block boxes</h2>
   <ul>
     <li>Will break onto a new line;</li>
     <li>Will fill all of the space available in that line;</li>
     <li>The <strong>width</strong> and <strong>height</strong> properties are respected;</li>
     <li>Padding, margin and border will push other elements away from the box.</li>
   </ul>
-  <h2>Inline boxes:</h2>
+  <h2>Inline boxes</h2>
   <ul>
     <li>Will not break onto a new line;</li>
     <li>The <strong>width</strong> and <strong>height</strong> properties are not respected;</li>
@@ -65,16 +65,16 @@
   <div class="inline-box">INLINE BOX</div>
   <div class="inline-box">INLINE BOX</div>All of these boxes have: margin: 20px, padding: 10px.
   <div class="block-box">BLOCK BOX</div>
-  <h2>Content box:</h2>
+  <h2>Content box</h2>
   <p>
     The area where the content is displayed. Can be changed using <strong>width</strong> and
     <strong>height</strong>.
   </p>
-  <h2>Padding box:</h2>
+  <h2>Padding box</h2>
   <p>
     The area that sits around the content. Can be changed using <strong>padding</strong>.
   </p>
-  <h2>Border box:</h2>
+  <h2>Border box</h2>
   <p>
     The area that wraps content and padding. Can be changed using <strong>border</strong>.
   </p>
@@ -83,27 +83,27 @@
     The area that wraps everything as whitespace between this element and other elements.
     Can be changed using <strong>margin</strong>.
   </p>
-  <h2>Standard CSS box model:</h2>
+  <h2>Standard CSS box model</h2>
   <p>The size of the box is the size of the content box.</p>
-  <h2>Alternative CSS box model:</h2>
+  <h2>Alternative CSS box model</h2>
   <p>
     The size of the box is the size of the content, padding and margin boxes together.<br>
     Set <strong>box-sizing:</strong> <em>border-box</em> to achieve this.
   </p>
-  <h2>Margins:</h2>
+  <h2>Margins</h2>
   <p>
     If two margins collapse, the highest absolute value margin will be the one that's displayed.
     However, if one of them is positive and the other is negative, the displayed value will be
     the sum of the two.
   </p>
-  <h2>Borders:</h2>
+  <h2>Borders</h2>
   <p>
     If the box sizing is standard, the border is added to the width and height of the box.
     If the box sizing is <em>border-box</em>, the border takes up the available width and height.<br>
     The border can be styled using <strong>border-width</strong>, <strong>border-style</strong>,
     <strong>border-color</strong> and <strong>border-radius</strong> to round off corners.
   </p>
-  <h2>Padding:</h2>
+  <h2>Padding</h2>
   <p>
     Unlike margins, padding cannot be negative. If the box has a background, it will be displayed on
     the padding.
@@ -118,12 +118,12 @@
     <li>Vertical padding, borders and margins will push other elements away.</li>
   </ul>
   <h1>Backgrounds and borders</h1>
-  <h2>Background color:</h2>
+  <h2>Background color</h2>
   <p>
     The <strong>background-color</strong> attribute gives the element's background a color,
     <span id="bg-color">like this</span>.
   </p>
-  <h2>Background image:</h2>
+  <h2>Background image</h2>
   <p>
     The <strong>background-image</strong> attribute displays and image on the element's background.<br>
     The <strong>background-repeat</strong> attribute controls the tiling behaviour of the image:
@@ -172,7 +172,7 @@
     <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
   </ul>
   <h1>Text directions</h1>
-  <h2>Writing modes:</h2>
+  <h2>Writing modes</h2>
   <p>
     The <strong>writing-mode</strong> attribute allows for different writing directions.
   </p>
@@ -184,14 +184,14 @@
   <div class="wrt-mode hor">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode ver-rl">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode ver-lr">Lorem ipsum dolor sit amet</div>
-  <h2>Width and height:</h2>
+  <h2>Width and height</h2>
   <p>
     Width and height can be set based on the <strong>writing-mode</strong>. For that, just use the 
     <strong>inline-size</strong> and <strong>block-size</strong> attributes.
   </p>
   <div class="wrt-mode wrt-size hor">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode wrt-size ver-rl">Lorem ipsum dolor sit amet</div>
-  <h2>Logical values:</h2>
+  <h2>Logical values</h2>
   <p>
     Top, right, left and bottom values can also be set based on the <strong>writing-mode</strong>. 
     Use the <strong>block-start</strong>, <strong>inline-end</strong>, <strong>block-end</strong> 
@@ -200,7 +200,7 @@
   <div class="wrt-mode hor log-vals">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode ver-rl log-vals">Lorem ipsum dolor sit amet</div>
   <h1>Overflowing content</h1>
-  <h2>Overflow:</h2>
+  <h2>Overflow</h2>
   <p>
     Content you put inside a box may be too big to fit inside it. The <strong>overflow</strong> attribute 
     determines what to do in this situation.
@@ -212,7 +212,7 @@
     <li><strong>overflow-x</strong> and <strong>overflow-y</strong> can also be used.</li>
   </ul>
   <h1>CSS values and units</h1>
-  <h2>Data types:</h2>
+  <h2>Data types</h2>
   <p>CSS has 4 data types:</p>
   <ul>
     <li>&lt;integer&gt;: a whole number such as 2048 or -125;</li>
@@ -220,7 +220,7 @@
     <li>&lt;dimension&gt;: a &lt;number&gt; with a unit attached to it, such as 45deg, 16px or 5s;</li>
     <li>&lt;percentage&gt;: represents a fraction of another value, such as 50%.</li>
   </ul>
-  <h2>Lengths:</h2>
+  <h2>Lengths</h2>
   <p>CSS has absolute and relative length units:</p>
   <div class="table">
     <table>
@@ -271,7 +271,7 @@
           <td>ex</td> <td>x-height of the element's font.</td>
         </tr>
         <tr>
-          <td>rem</td> <td>Font size of the root element.</td>
+          <td>rem</td> <td>Font size of the root (html) element.</td>
         </tr>
         <tr>
           <td>vw</td> <td>1% of the viewport's width.</td>
@@ -288,6 +288,34 @@
       </tbody>
     </table>
   </div>
+  <h2>Color</h2>
+  <p>There are different ways to represent color in CSS. The main ones are:</p>
+  <ul>
+    <li>Hexadecimal: #FF0099;</li>
+    <li>Functional without opacity value: rgb(255, 0, 153);</li>
+    <li>Functional with opacity value: rgba(255, 0, 153, 0.8).</li>
+  </ul>
+  <h2>Images</h2>
+  <p>
+    The &lt;image&gt; data type is used wherever an image is a valid value. This can be an actual image file 
+    pointed to via a url() function, or a gradient.
+  </p>
+  <h2>Position</h2>
+  <p>
+    The &lt;position&gt; data type represents a set of 2D coordinates, used to position an item. A typical 
+    position value consists of two values — the first sets the position horizontally, the second vertically. 
+    <br>If you only specify values for one axis the other will default to <em>center</em>.
+  </p>
+  <h2>Strings and identifiers</h2>
+  <p>
+    A string is used in CSS for specifying generated content.<br>
+    An identifier is not quoted like a string and it is a keyword for a value that CSS understands.
+  </p>
+  <h2>Functions</h2>
+  <p>
+    In programming, a function is a reusable section of code that can be run multiple times to complete a 
+    repetitive task. Some examples are url("img.jpg") and calc(50% + 8px).
+  </p>
 
 
 
