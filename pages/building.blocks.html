@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building Blocks</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
   <h1>Cascade and Inheritance</h1>
   <h2>Cascade:</h2> If two rules are equal, the one that comes last is applied.
   <h2>Specificity:</h2> The rule is applied if it is the most specific to that element.
-  <h2>Inheritance:</h2> Some properties set on parent elements are inherited by their child elements, 
+  <h2>Inheritance:</h2> Some properties set on parent elements are inherited by their child elements,
   and some aren't. For example, <strong>color</strong> is inherited, <strong>width</strong> is not.<br>
   <p><strong>inherit:</strong> Turns inheritance on.</p>
   <p><strong>initial:</strong> Turns inheritance off.</p>
@@ -19,20 +21,20 @@
   <h1>Selectors</h1>
   <h2>Type, class and ID:</h2> This group includes selectors that target an HTML element.<br>
   Examples: h1{}, .a-class{}, #some-id{}.
-  <h2>Attribute:</h2> This group of selectors selects elements based on the presence of a 
+  <h2>Attribute:</h2> This group of selectors selects elements based on the presence of a
   certain attribute.<br>
   Examples: a[title]{}, a[href="example.com"]{}.
-  <h2>Pseudo-class and pseudo-element:</h2> This group of selectors styles certain states 
+  <h2>Pseudo-class and pseudo-element:</h2> This group of selectors styles certain states
   or parts of an element.<br>
   Examples: a:hover{}, p::first-line{}.
   <h2>Combinator:</h2> This group of selectors combine other selectors in order to target elements
   within our documents.<br>
   Example: article > p{}.
   <h2>Universal:</h2> This selects all elements: *{}
-  <h2>Descendant:</h2> The descendant combinator combines two selectors such that elements matched 
+  <h2>Descendant:</h2> The descendant combinator combines two selectors such that elements matched
   by the second selector are selected if they have an ancestor element matching the first selector.<br>
   Examples: div li{}, p strong{}.
-  <h2>Adjacent sibling:</h2> This combinator matches the second element only if it immediately follows 
+  <h2>Adjacent sibling:</h2> This combinator matches the second element only if it immediately follows
   the first element.
   Example: img + p{}.
   <h2>General sibling:</h2> Same as the adjacent sibling combinator, but without the "immediately" part.<br>
@@ -51,11 +53,11 @@
     <li>Will not break onto a new line;</li>
     <li>The <strong>width</strong> and <strong>height</strong> properties are not respected;</li>
     <li>
-      Vertical padding, margins and borders will apply but will not cause other inline boxes 
+      Vertical padding, margins and borders will apply but will not cause other inline boxes
       to move away from the box.
     </li>
     <li>
-      Horizontal padding, margins and borders will apply and will cause other inline boxes 
+      Horizontal padding, margins and borders will apply and will cause other inline boxes
       to move away from the box.
     </li>
   </ul>
@@ -65,7 +67,7 @@
   <div class="block-box">BLOCK BOX</div>
   <h2>Content box:</h2>
   <p>
-    The area where the content is displayed. Can be changed using <strong>width</strong> and 
+    The area where the content is displayed. Can be changed using <strong>width</strong> and
     <strong>height</strong>.
   </p>
   <h2>Padding box:</h2>
@@ -78,7 +80,7 @@
   </p>
   <h2>Margin box</h2>
   <p>
-    The area that wraps everything as whitespace between this element and other elements. 
+    The area that wraps everything as whitespace between this element and other elements.
     Can be changed using <strong>margin</strong>.
   </p>
   <h2>Standard CSS box model:</h2>
@@ -90,20 +92,20 @@
   </p>
   <h2>Margins:</h2>
   <p>
-    If two margins collapse, the highest absolute value margin will be the one that's displayed. 
-    However, if one of them is positive and the other is negative, the displayed value will be 
+    If two margins collapse, the highest absolute value margin will be the one that's displayed.
+    However, if one of them is positive and the other is negative, the displayed value will be
     the sum of the two.
   </p>
   <h2>Borders:</h2>
   <p>
-    If the box sizing is standard, the border is added to the width and height of the box. 
-    If the box sizing is <em>border-box</em>, the border takes up the available width and height.<br> 
-    The border can be styled using <strong>border-width</strong>, <strong>border-style</strong>, 
+    If the box sizing is standard, the border is added to the width and height of the box.
+    If the box sizing is <em>border-box</em>, the border takes up the available width and height.<br>
+    The border can be styled using <strong>border-width</strong>, <strong>border-style</strong>,
     <strong>border-color</strong> and <strong>border-radius</strong> to round off corners.
   </p>
   <h2>Padding:</h2>
   <p>
-    Unlike margins, padding cannot be negative. If the box has a background, it will be displayed on 
+    Unlike margins, padding cannot be negative. If the box has a background, it will be displayed on
     the padding.
   </p>
   <h2>Display: inline-block</h2>
@@ -118,43 +120,57 @@
   <h1>Backgrounds and borders</h1>
   <h2>Background color:</h2>
   <p>
-    The <strong>background-color</strong> attribute gives the element's background a color. 
+    The <strong>background-color</strong> attribute gives the element's background a color,
+    <span id="bg-color">like this</span>.
   </p>
   <h2>Background image:</h2>
   <p>
     The <strong>background-image</strong> attribute displays and image on the element's background.<br>
     The <strong>background-repeat</strong> attribute controls the tiling behaviour of the image:
-    <ul>
-      <li><strong>background-repeat</strong>: <em>no-repeat</em> -- the background doesn't repeat;</li>
-      <li><strong>background-repeat</strong>: <em>repeat-x</em> -- repeats horizontally;</li>
-      <li><strong>background-repeat</strong>: <em>repeat-y</em> -- repeats vertically;</li>
-      <li><strong>background-repeat</strong>: <em>repeat</em> -- the default, repeats in both directions.</li>
-    </ul>
-    <p>
-      The <strong>background-size</strong> attribute controls the sizing of the image:
-    </p>
-    <ul>
-      <li><strong>background-size</strong>: <em>cover</em> -- completely covers the box (may end up cropped).</li>
-      <li><strong>background-size</strong>: <em>contain</em> -- fits inside the box (may cause gaps).</li>
-      <li>You can also use pixels or percentages.</li>
-    </ul>
-    <p>
-      The <strong>background-position</strong> attribute controls the position of the image. Use 
-      values like top, center or specify values to be applied to <var>x</var> and <var>y</var>, like 
-      <em>25% 75%</em>.
-    </p>
-    <p>
-      You can also use gradients for your background. Just use the <strong>background-image</strong> 
-      attribute and assign a gradient value to it, such as <em>linear-gradient(#f69d3c, #3f87a6)</em>.
-    </p>
-    <p>
-      The <strong>background-attachment</strong> attribute controls the image's behaviour when scrolling: 
-      <ul>
-        <li><strong>background-attachment</strong>: <em>scroll</em> -- scrolls with the page and the element.</li>
-        <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll.</li>
-        <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
-      </ul>
-    </p>
+  <ul>
+    <li><strong>background-repeat</strong>: <em>no-repeat</em> -- the background doesn't repeat;</li>
+    <li><strong>background-repeat</strong>: <em>repeat-x</em> -- repeats horizontally;</li>
+    <li><strong>background-repeat</strong>: <em>repeat-y</em> -- repeats vertically;</li>
+    <li><strong>background-repeat</strong>: <em>repeat</em> -- the default, repeats in both directions.</li>
+  </ul>
+  <div class="bg" id="bg-1"></div>
+  <div class="bg" id="bg-2"></div>
+  <div class="bg" id="bg-3"></div>
+  <div class="bg" id="bg-4"></div>
+  <p>
+    The <strong>background-size</strong> attribute controls the sizing of the image:
+  </p>
+  <ul>
+    <li><strong>background-size</strong>: <em>cover</em> -- completely covers the box (may end up cropped).</li>
+    <li><strong>background-size</strong>: <em>contain</em> -- fits inside the box (may cause gaps).</li>
+    <li>You can also use pixels or percentages.</li>
+  </ul>
+  <div class="bg" id="bg-5"></div>
+  <div class="bg" id="bg-6"></div>
+  <div class="bg" id="bg-7"></div>
+  <p>
+    The <strong>background-position</strong> attribute controls the position of the image. Use
+    values like top, center or specify values to be applied to <var>x</var> and <var>y</var>, like
+    <em>25% 75%</em>.
+  </p>
+  <div class="bg" id="bg-8"></div>
+  <div class="bg" id="bg-9"></div>
+  <div class="bg" id="bg-10"></div>
+  <p>
+    You can also use gradients for your background. Just use the <strong>background-image</strong>
+    attribute and assign a gradient value to it, such as <em>linear-gradient(#f69d3c, #3f87a6)</em>.
+  </p>
+  <div class="bg" id="bg-11"></div>
+  <p>
+    The <strong>background-attachment</strong> attribute controls the image's behaviour when scrolling.
+    Here's an
+    <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">example</a>.
+  <ul>
+    <li><strong>background-attachment</strong>: <em>scroll</em> -- scrolls with the page and the element.</li>
+    <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll.</li>
+    <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
+  </ul>
+  </p>
   </p>
 
 
@@ -183,4 +199,5 @@
 
 
 </body>
+
 </html>

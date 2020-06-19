@@ -15,3 +15,64 @@
   padding: 10px;
   margin: 20px;
 }
+
+#bg-color {
+  background-color: forestgreen;
+}
+
+.bg {
+  display: inline-block;
+  width: 250px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid black;
+  background-image: url("imgs/bg.png");
+  background-size: 40px;
+}
+
+#bg-1 {
+  background-repeat: no-repeat;
+}
+
+#bg-2 {
+  background-repeat: repeat-x;
+}
+
+#bg-3 {
+  background-repeat: repeat-y;
+}
+
+#bg-4 {
+  background-repeat: repeat;
+}
+
+#bg-5 {
+  background-size: cover;
+}
+
+#bg-6 {
+  background-size: contain;
+}
+
+#bg-7 {
+  background-size: 50% 50%;
+}
+
+#bg-8 {
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#bg-9 {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#bg-10 {
+  background-position: 25% 75%;
+  background-repeat: no-repeat;
+}
+
+#bg-11 {
+  background-image: linear-gradient(#f69d3c, #3f87a6);
+}
