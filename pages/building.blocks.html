@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building Blocks</title>
   <link rel="stylesheet" href="../styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -374,6 +375,182 @@
       </code>
     </pre>
   </p>
+  <h1>Styling tables</h1>
+  <h2>A typical HTML table</h2>
+  <p>This is a typical HTML table:</p>
+  <table>
+    <caption>A summary of the UK's most famous punk bands</caption>
+    <thead>
+      <tr>
+        <th scope="col">Band</th>
+        <th scope="col">Year formed</th>
+        <th scope="col">No. of Albums</th>
+        <th scope="col">Most famous song</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Buzzcocks</th>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever fallen in love (with someone you shouldn't've)</td>
+      </tr>
+      <tr>
+        <th scope="row">The Clash</th>
+        <td>1976</td>
+        <td>6</td>
+        <td>London Calling</td>
+      </tr>
+      <tr>
+        <th scope="row">The Stranglers</th>
+        <td>1974</td>
+        <td>17</td>
+        <td>No More Heroes</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Total albums</th>
+        <td colspan="2">77</td>
+      </tr>
+    </tfoot>
+  </table>
+  <h2>Styling and layout</h2>
+  <p>
+    CSS has some attributes to configure a table's layout:
+  </p>
+  <ul>
+    <li><strong>table-layout</strong>: <em>fixed</em> -- size your columns according to the width of the headings;</li>
+    <li>Change the width of a heading by selecting: thead th:nth-child(n);</li>
+    <li><strong>border-collapse</strong>: <em>collapse</em> -- removes space between borders;</li>
+    <li>Add borders and some padding for the &lt;th&gt; and &lt;th&gt; elements.</li>
+  </ul>
+  <table class="table-2">
+    <caption>A summary of the UK's most famous punk bands</caption>
+    <thead class="table-2-head">
+      <tr>
+        <th scope="col">Band</th>
+        <th scope="col">Year formed</th>
+        <th scope="col">No. of Albums</th>
+        <th scope="col">Most famous song</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Buzzcocks</th>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever fallen in love (with someone you shouldn't've)</td>
+      </tr>
+      <tr>
+        <th scope="row">The Clash</th>
+        <td>1976</td>
+        <td>6</td>
+        <td>London Calling</td>
+      </tr>
+      <tr>
+        <th scope="row">The Stranglers</th>
+        <td>1974</td>
+        <td>17</td>
+        <td>No More Heroes</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Total albums</th>
+        <td colspan="2">77</td>
+      </tr>
+    </tfoot>
+  </table>
+  <h2>Some simple typography</h2>
+  <p>Let's add some typography that correlates with punk bands.</p>
+  <ul>
+    <li><strong>letter-spacing</strong> -- improves readability;</li>
+    <li><strong>text-align</strong>: center -- you should always align the data with the headings.</li>
+  </ul>
+  <table class="table-2 table-3">
+    <caption>A summary of the UK's most famous punk bands</caption>
+    <thead class="table-2-head table-3-head">
+      <tr>
+        <th scope="col">Band</th>
+        <th scope="col">Year formed</th>
+        <th scope="col">No. of Albums</th>
+        <th scope="col">Most famous song</th>
+      </tr>
+    </thead>
+    <tbody class="table-3-body">
+      <tr>
+        <th scope="row">Buzzcocks</th>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever fallen in love (with someone you shouldn't've)</td>
+      </tr>
+      <tr>
+        <th scope="row">The Clash</th>
+        <td>1976</td>
+        <td>6</td>
+        <td>London Calling</td>
+      </tr>
+      <tr>
+        <th scope="row">The Stranglers</th>
+        <td>1974</td>
+        <td>17</td>
+        <td>No More Heroes</td>
+      </tr>
+    </tbody>
+    <tfoot class="table-3-foot">
+      <tr>
+        <th scope="row" colspan="2">Total albums</th>
+        <td colspan="2">77</td>
+      </tr>
+    </tfoot>
+  </table>
+  <h2>Graphics and colors</h2>
+  <p>Now, customise the colors, customise the caption and add a bit more style.</p>
+  <ul>
+    <li>
+      The :nth-child selector accepts the <em>odd</em> and <em>even</em> keywords. You can use that to 
+      give your rows two alternating colors;
+    </li>
+    <li><strong>caption-side</strong>: <em>bottom</em> -- the caption goes to the bottom of the table.</li>
+  </ul>
+  <table class="table-2 table-3 table-4">
+    <caption>A summary of the UK's most famous punk bands</caption>
+    <thead class="table-2-head table-3-head table-4-head">
+      <tr>
+        <th scope="col">Band</th>
+        <th scope="col">Year formed</th>
+        <th scope="col">No. of Albums</th>
+        <th scope="col">Most famous song</th>
+      </tr>
+    </thead>
+    <tbody class="table-3-body table-4-body">
+      <tr class="tr-4">
+        <th scope="row">Buzzcocks</th>
+        <td>1976</td>
+        <td>9</td>
+        <td>Ever fallen in love (with someone you shouldn't've)</td>
+      </tr>
+      <tr class="tr-4">
+        <th scope="row">The Clash</th>
+        <td>1976</td>
+        <td>6</td>
+        <td>London Calling</td>
+      </tr>
+      <tr class="tr-4">
+        <th scope="row">The Stranglers</th>
+        <td>1974</td>
+        <td>17</td>
+        <td>No More Heroes</td>
+      </tr>
+    </tbody>
+    <tfoot class="table-3-foot table-4-foot">
+      <tr>
+        <th scope="row" colspan="2">Total albums</th>
+        <td colspan="2">77</td>
+      </tr>
+    </tfoot>
+  </table>
 
 
 

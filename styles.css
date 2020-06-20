@@ -114,13 +114,19 @@
   display: inline-block;
 }
 
-table {
+.table table {
   font-size: 24px;
   border-collapse: collapse;
   margin-left: 24px;
 }
 
-td, th {
+.table td {
+  border: 1px solid #999;
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.table th {
   border: 1px solid #999;
   padding: 0.4rem;
   text-align: left;
@@ -163,4 +169,78 @@ img {
 
 .img-contain {
   object-fit: contain;
+}
+
+.table-2 th, .table-2 td {
+  padding: 20px;
+}
+
+.table-2 {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+.table-2-head th:nth-child(1) {
+  width: 30%;
+}
+
+.table-2-head th:nth-child(2) {
+  width: 20%;
+}
+
+.table-2-head th:nth-child(3) {
+  width: 15%;
+}
+
+.table-2-heads th:nth-child(4) {
+  width: 35%;
+}
+
+.table-3-head th, .table-3-foot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+.table-3 th {
+  letter-spacing: 2px;
+}
+
+.table-3 td {
+  letter-spacing: 1px;
+}
+
+.table-3-body td {
+  text-align: center;
+}
+
+.table-3-foot th {
+  text-align: right;
+}
+
+.table-4-head, .table-4-foot {
+  background-image: linear-gradient(blueviolet, darkmagenta);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.table-head-4 th, .table-foot-4 th, .table-foot-4 td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid purple;
+}
+
+.tr-4:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+.tr-4:nth-child(even) {
+  background-color: #e495e4;
+}
+
+.table-4 caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
 }
