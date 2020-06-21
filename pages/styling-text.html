@@ -10,11 +10,147 @@
   <h1>Fundamental text and font styling</h1>
   <h2>Fonts</h2>
   <p>
-    Fonts have some properties:
+    Fonts have some properties, like <strong>color</strong>. Here's how to style fonts.
   </p>
+  <h2>Font families</h2>
+  <p>
+    The <strong>font-family</strong> attribute sets a different font on your text. There are 5 generic names 
+    for fonts: <span class="serif">serif</span>, <span class="sans-serif">sans-serif</span>, 
+    <span class="monospace">monospace</span>, <span class="cursive">cursive</span> and 
+    <span class="fantasy">fantasy</span>.
+    <em>Cursive</em> and <em>fantasy</em> are inconsistent and should not be used.<br>
+    There are web safe fonts. These are fonts that will display on any browser, theoretically. Here's a list:
+  </p>
+  <table class="table-fonts">
+    <thead class="thead-fonts">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Generic type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Arial</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Courier New</td>
+        <td>monospace</td>
+      </tr>
+      <tr>
+        <td>Georgia</td>
+        <td>serif</td>
+      </tr>
+      <tr>
+        <td>Times New Roman</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Trebuchet MS</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Verdana</td>
+        <td>sans-serif</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Font stacks</h2>
+  <p>
+    It's good practice to specify multiple font families, like the following. <strong>font-family</strong>: 
+    <em>"Trebuchet MS", Verdana, sans-serif;</em><br>
+    <span class="font-stacks">Lorem ipsum dolor sit amet.</span>
+  </p>
+  <h2>Font size</h2>
+  <p>
+    The <strong>font-size</strong> attribute specifies the size of your font. It is good practice to 
+    specify the &lt;html&gt; font size to <em>10px</em> and everything else in <em>rems</em>, so that 
+    everything scales nicely.
+  </p>
+  <h2>Style, weight, transform, decoration</h2>
+  <p>CSS provides 4 properties to alter the weight of text:</p>
   <ul>
-    <li><strong>color</strong>: accepts any CSS color unit;</li>
-    <li><strong>text-decoration</strong>: things like <em>underline dotted</em> and <em>overline red</em>;</li>
+    <li>
+      <strong>font-style</strong>: <span class="normal">normal</span>, <span class="italic">italic</span> or 
+      <span class="oblique">oblique</span>;
+    </li>
+    <li>
+      <strong>font-weight</strong>: <span class="normal">normal</span>, <span class="bold">bold</span>, 
+      <span class="lighter">lighter</span>, <span class="bolder">bolder</span>. You can also specify a number 
+      from 100 to 900;
+    </li>
+    <li>
+      <strong>text-transform</strong>: <span>none</span>, <span class="uppercase">uppercase</span>, 
+      lowercase, <span class="capitalize">capitalize</span>, <span class="full-width">full-width</span>;
+    </li>
+    <li>
+      <strong>text-decoration</strong>: <span class="none">none</span>, <span class="underline">underline</span>, 
+      <span class="overline">overline</span>, <span class="line-through">line-through</span>. You can also use 
+      multiple values, like <span class="dec">underline red wavy</span>.
+    </li>
   </ul>
+  <h2>Text drop shadows</h2>
+  <p>
+    The <strong>text-shadow</strong> attribute applies a shadow effect to your text, 
+    <span class="shadow">like this</span>. It receives 4 values:
+  </p>
+  <ol>
+    <li>Horizontal offset;</li>
+    <li>Vertical offset;</li>
+    <li>Blur radius;</li>
+    <li>Base color.</li>
+  </ol>
+  <h2>Text layout</h2>
+  <p>There are attributes you can use to affect text layout.</p>
+  <ul>
+    <li>
+      <strong>text-align</strong>: <em>left, right, center or justify</em>. The <em>justify</em> 
+      spec makes the text spread out so that all lines of text are the same width.
+    </li>
+    <li>
+      <strong>line-height</strong>: use numbers as values, like 1.6. 
+      <span class="line-height">Makes the text look nicer.</span>
+    </li>
+    <li><strong>letter-spacing</strong>: <span class="l-spacing">use dimensions as values, like 4px.</span></li>
+    <li><strong>word-spacing</strong>: <span class="w-spacing">same as letter-spacing, but for words.</span></li>
+  </ul>
+  <p>
+    There are lots of other properties for text so research them if you want to really style your text.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -244,3 +244,111 @@ img {
   caption-side: bottom;
   letter-spacing: 1px;
 }
+
+.serif {
+  font-family: serif;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.cursive {
+  font-family: cursive;
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+
+.table-fonts {
+  border-collapse: collapse;
+}
+
+.thead-fonts {
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+.table-fonts th, .table-fonts td {
+  border: 2px solid grey;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.font-stacks {
+  font-family: "Trebuchet MS", Verdava, sans-serif;
+}
+
+.normal {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.full-width {
+  text-transform: full-width;
+}
+
+.dec {
+  text-decoration: underline red wavy;
+}
+
+.shadow {
+  text-shadow: 2px 3px 1px orangered;
+}
+
+.line-height {
+  line-height: 1.6;
+}
+
+.l-spacing {
+  letter-spacing: 4px;
+}
+
+.w-spacing {
+  word-spacing: 8px;
+}
