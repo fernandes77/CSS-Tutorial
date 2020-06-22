@@ -360,3 +360,37 @@ img {
 .list-position {
   list-style-position: inside;
 }
+
+.default-link {
+  font-size: 64px;
+}
+
+.styled-link {
+  font-size: 64px;
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.styled-link:link {
+  color: indigo;
+}
+
+.styled-link:visited {
+  color: midnightblue;
+}
+
+.styled-link:focus {
+  border-bottom: 5px solid;
+  background: dodgerblue;
+}
+
+.styled-link:hover {
+  border-bottom: 5px solid;
+  background: royalblue;
+}
+
+.styled-link:active {
+  background: darkblue;
+  color: cornflowerblue;  
+}
