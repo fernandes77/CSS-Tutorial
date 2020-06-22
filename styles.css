@@ -394,3 +394,25 @@ img {
   background: darkblue;
   color: cornflowerblue;  
 }
+
+@font-face {
+  font-family: "myFont";
+  src: url(fonts/LilithHeavy.ttf);
+}
+
+.web-font {
+  font-family: "myFont", "Bitstream Vera Serif", serif;
+  font-size: 64px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

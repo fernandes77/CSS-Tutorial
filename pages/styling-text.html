@@ -173,6 +173,24 @@
   <a class="default-link" href="#">This is a link</a>
   <p>After styling every state, it looks like this:</p>
   <a class="styled-link" href="#">This is a link</a>
+  <h1>Web fonts</h1>
+  <p>
+    The options are pretty limited when it comes to web-safe fonts. Luckily, there is a way to embed
+    font files into your website.
+  </p>
+  <pre>
+    <code>
+      @font-face {
+        font-family: "myFont";
+        src: url(myFont.woff);
+      }
+
+      html {
+        font-family: "myFont", "Bitstream Vera Serif", serif;
+      }
+    </code>
+  </pre>
+  <p class="web-font">This is a paragraph written is a custom font.</p>
 
 
 
