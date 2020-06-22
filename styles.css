@@ -352,3 +352,11 @@ img {
 .w-spacing {
   word-spacing: 8px;
 }
+
+.list-type {
+  list-style-type: upper-roman;
+}
+
+.list-position {
+  list-style-position: inside;
+}

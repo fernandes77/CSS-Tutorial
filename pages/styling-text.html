@@ -117,7 +117,47 @@
   <p>
     There are lots of other properties for text so research them if you want to really style your text.
   </p>
-
+  <h1>Styling lists</h1>
+  <p>There are some CSS properties that are specific to lists.</p>
+  <h2>Bullet styles</h2>
+  <p>
+    The <strong>list-style-type</strong> specifies the type of bullets for the list, ordered or not. Setting it to 
+    <em>upper-roman</em>, for example, leads to this:
+  </p>
+  <ol class="list-type">
+    <li>1 cup plain unsweetened almond milk;</li>
+    <li>1/2 cup plain full fat Greek yogurt;</li>
+    <li>1 scoop vanilla protein powder;</li>
+    <li>1 frozen banana;</li>
+    <li>1/8 tsp ground cinnamon;</li>
+    <li>ice as needed.</li>
+  </ol>
+  <h2>Bullet position</h2>
+  <p>
+    The <strong>list-style-position</strong> attribute specifies whether the bullets are displayed inside the 
+    items, or outside of them. The default value is <em>outside</em>. Here's what <em>inside</em> looks like:
+  </p>
+  <ol class="list-type list-position">
+    <li>1 cup plain unsweetened almond milk;</li>
+    <li>1/2 cup plain full fat Greek yogurt;</li>
+    <li>1 scoop vanilla protein powder;</li>
+    <li>1 frozen banana;</li>
+    <li>1/8 tsp ground cinnamon;</li>
+    <li>ice as needed.</li>
+  </ol>
+  <h2>Bullet image</h2>
+  <p>
+    The <strong>list-style-image</strong> attribute adds an image as your bullet. However, you don't have much 
+    control over the bullet's positioning. It is better to use the <strong>background-image</strong> attribute 
+    and erasing the original bullets.
+  </p>
+  <h2>List counting</h2>
+  <p>You can control the counting of ordered lists.</p>
+  <ol start="4" reversed>
+    <li><strong>start</strong>: add start="x" to the &lt;ol&gt; tag to make the list start at x;</li>
+    <li><strong>reversed</strong>: add reversed to the &lt;ol&gt; tag to make the list count down;</li>
+    <li value="77"><strong>value</strong>: add value="x" to the &lt;li&gt; tags to specify the exact list item value.</li>
+  </ol>
 
 
 
