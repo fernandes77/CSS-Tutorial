@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "myFont";
+  src: url(fonts/LilithHeavy.ttf);
+}
+
+html {
+  line-height: 1.5;
+}
+
 .block-box {
   display: block;
   background-color: blue;
@@ -362,11 +371,11 @@ img {
 }
 
 .default-link {
-  font-size: 64px;
+  font-size: 24px;
 }
 
 .styled-link {
-  font-size: 64px;
+  font-size: 24px;
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
@@ -395,24 +404,66 @@ img {
   color: cornflowerblue;  
 }
 
-@font-face {
-  font-family: "myFont";
-  src: url(fonts/LilithHeavy.ttf);
-}
-
 .web-font {
   font-family: "myFont", "Bitstream Vera Serif", serif;
   font-size: 64px;
 }
 
+.div-float {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-color: greenyellow;
+  border: 2px solid black;
+  margin-right: 5px;
+}
 
+.flex-article {
+  background: aqua;
+  margin: 5px;
+}
 
+.flex-section {
+  display: flex;
+}
 
+.column-section {
+  flex-direction: column;
+}
 
+.wrap-section {
+  flex-wrap: wrap;
+}
 
+.wrap-article {
+  flex: 200px;
+}
 
+.fraction-article {
+  flex: 1 150px;
+}
 
+.fraction-article-2 {
+  flex: 2 150px;
+}
 
+.contain-align {
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+}
 
+.align {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
 
+.just-align {
+  align-items: center;
+  justify-content: space-around;
+}
 
+.order:first-child {
+  order: 1;
+}

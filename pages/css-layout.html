@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>CSS Layout</title>
+</head>
+
+<body>
+  <h1>Flexbox</h1>
+  <p>
+    Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to
+    fill additional space and shrink to fit into smaller spaces.
+  </p>
+  <header>
+    <h2>Sample flexbox example</h2>
+  </header>
+
+  <section>
+    <article class="flex-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.</p>
+    </article>
+    <article class="flex-article">
+      <h2>Second article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+    </article>
+    <article class="flex-article">
+      <h2>Third article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+      <p>
+        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
+        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
+      </p>
+    </article>
+  </section>
+  <h2>Specifying what elements are laid out as flexible boxes</h2>
+  <p>
+    To lay each article as a flexible box, set the parent element's <strong>display</strong> attribute to
+    <em>flex</em>.
+  </p>
+  <section class="flex-section">
+    <article class="flex-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.</p>
+    </article>
+    <article class="flex-article">
+      <h2>Second article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+    </article>
+    <article class="flex-article">
+      <h2>Third article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+      <p>
+        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
+        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
+      </p>
+    </article>
+  </section>
+  <p>
+    Just like that, the boxes occupy the whole width of the parent and the height of the biggest content.
+  </p>
+  <h2>Columns or rows</h2>
+  <p>
+    The <strong>flex-direction</strong> attribute determines how the elements are laid out: row or column.<br>
+    The default value for it is <em>row</em>. Here's how it looks with a <em>column</em> value:
+  </p>
+  <section class="flex-section column-section">
+    <article class="flex-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.</p>
+    </article>
+    <article class="flex-article">
+      <h2>Second article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+    </article>
+    <article class="flex-article">
+      <h2>Third article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+      <p>
+        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
+        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
+      </p>
+    </article>
+  </section>
+  <p>
+    It goes back to it's original layout. You can also set the values <em>column-reverse</em> and
+    <em>row-reverse</em>.
+  </p>
+  <h2>Wrapping</h2>
+  <p>
+    Your flexbox items content might overflow the parent's width or height. The <strong>flex-wrap</strong>
+    attribute, when set to <em>wrap</em>, breaks the items into a new line whenever there is content overflow.<br>
+    You can also set <strong>flex</strong>: <em>200px</em> to the &lt;article&gt; elements to specify a minimum
+    width.
+  </p>
+  <section class="flex-section wrap-section">
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+    <article class="flex-article wrap-article">
+      <h2>First article</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+      </p>
+    </article>
+  </section>
+  <h2>Flex flow</h2>
+  <p>There is a shorthand to specify direction and wrap. The <strong>flex-flow</strong> attribute:</p>
+  <p><strong>flex-flow</strong>: <em>row wrap</em>;</p>
+  <h2>Flexible sizing of items</h2>
+  <p>
+    Ýou can control the sizing of flex items when compared to other flex items.
+  </p>
+  <ul>
+    <li><strong>flex</strong>: <em>1</em> -- will occupy 1/n of the available space;</li>
+    <li>
+      <strong>flex</strong>: <em>2 150px</em> -- will occupy a minimum of 200px and then 2/n of the
+      available space.
+    </li>
+  </ul>
+  <section class="flex-section">
+    <article class="flex-article fraction-article">
+      <h2>First article (flex: 1)</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.</p>
+    </article>
+    <article class="flex-article fraction-article">
+      <h2>Second article (flex: 1)</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+    </article>
+    <article class="flex-article fraction-article-2">
+      <h2>Third article (flex: 2)</h2>
+      <p>
+        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+        booth health goth gastropub hammock.
+      </p>
+      <p>
+        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
+        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
+      </p>
+    </article>
+  </section>
+  <p>
+    Obs.: <strong>flex</strong> is a shorthand for <strong>flex-grow</strong> and <strong>flex-basis</strong>.
+  </p>
+  <h2>Horizontal and vertical alignment</h2>
+  <p>
+    The <strong>align-items</strong> and <strong>justify-content</strong> attributes align flex items.<br>
+    <strong>align-items</strong> controls the cross axis while <strong>justify-content</strong> controls the 
+    main axis.
+  </p>
+  <div class="contain-align">
+    <button class="align">Smile</button>
+    <button class="align">Laugh</button>
+    <button class="align">Wink</button>
+    <button class="align">Shrug</button>
+    <button class="align">Blush</button>
+  </div>
+  <span>{<strong>display</strong>: <em>flex</em>;}</span>
+  <ul>
+    <li><strong>align-items</strong>: <em>stretch</em> -- default value, occupies the container's height;</li>
+    <li>
+      <strong>align-items</strong>: <em>center</em> -- placed in the center vertically, occupies the content's 
+      height;
+    </li>
+    <li>
+      <strong>align-items</strong>: <em>flex-start</em>/<em>flex-end</em> -- puts the items up or down, 
+      respectively.
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <strong>justify-content</strong>: <em>flex-start</em> -- default value, makes items sit at the start 
+      of the main axis;
+    </li>
+    <li>
+      <strong>justify-content</strong>: <em>flex-end</em> -- makes items sit at the end of the main axis;
+    </li>
+    <li>
+      <strong>justify-content</strong>: <em>center</em> -- makes items sit at the center of the main axis;
+    </li>
+    <li>
+      <strong>justify-content</strong>: <em>space-around</em> -- will distribute all items evenly across 
+      the main axis, with a bit of space at the start and at the end;
+    </li>
+    <li>
+      <strong>justify-content</strong>: <em>space-between</em> -- will distribute all items evenly across 
+      the main axis, without space at the start or at the end.
+    </li>
+  </ul>
+  <div class="contain-align just-align">
+    <button class="align">Smile</button>
+    <button class="align">Laugh</button>
+    <button class="align">Wink</button>
+    <button class="align">Shrug</button>
+    <button class="align">Blush</button>
+  </div>
+  <span>
+    {<strong>display</strong>: <em>flex</em>; <strong>align-items</strong>: <em>center</em>; 
+    <strong>justify-content</strong>: <em>space-around</em>;}
+  </span>
+  <h2>Ordering flex items</h2>
+  <p>
+    The <strong>order</strong> attribute sets the order in which flex items are displayed. The default 
+    value is 0.<br>
+    The values can be negative too. If two items have the same value, they will follow the source code order.
+  </p>
+  <div class="contain-align just-align">
+    <button class="align order">Smile (order: 1)</button>
+    <button class="align order">Laugh</button>
+    <button class="align order">Wink</button>
+    <button class="align order">Shrug</button>
+    <button class="align order">Blush</button>
+  </div>
+  <span>
+    .order:first-child {<strong>order</strong>: <em>1</em>;}
+  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
