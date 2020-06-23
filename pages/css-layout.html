@@ -349,8 +349,205 @@
   <span>
     .order:first-child {<strong>order</strong>: <em>1</em>;}
   </span>
-
-
+  <h1>Grids</h1>
+  <p>
+    CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and 
+    columns.
+  </p>
+  <h2>Defining a grid</h2>
+  <div class="container-grid">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  <p>
+    Declaring <strong>display</strong>: <em>grid</em>; will not change anything because it will just give you 
+    a one-column grid.<br>
+    Set <strong>grid-template-columns</strong>: <em>200px 200px 200px</em>; to make three 200px wide columns.
+  </p>
+  <div class="container-grid container-columns">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  <h2>Flexible grids with the fr unit</h2>
+  <p>
+    The <em>fr</em> unit allows the items to occupy a fraction of the container's available space.
+  </p>
+  <div class="container-grid container-columns-fr">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  Set <strong>grid-template-columns</strong>: <em>repeat(3, 1fr)</em> (for example) to write less code.
+  <h2>Gaps between tracks</h2>
+  <p>
+    The <strong>column-gap</strong> and <strong>row-gap</strong> (or just <strong>gap</strong>)
+    attributes allow you to add gaps between grid items.<br>
+  </p>
+  <div class="container-grid container-columns-fr container-gap">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  <h2>The implicit and explicit grid</h2>
+  <p>
+    When you set <strong>grid-template-columns</strong> or <strong>grid-template-rows</strong>, you are 
+    creating an explicit grid. When content is placed outside of that grid, the implicit grid is created.<br>
+    The implicit grid will be as large as the content in it. To determine a size for it, define  
+    <strong>grid-auto-rows</strong> or <strong>grid-auto-columns</strong> depending on which is implicit.
+  </p>
+  <div class="container-grid container-columns-fr container-gap container-implicit">
+    <div>One <br> Every row is now 100px tall.</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  <h2>The minmax function</h2>
+  <p>
+    The <em>minmax()</em> function allows you to set a minimum size for the implicit grid while also 
+    expanding it if there is content overflow.<br>
+    Set <strong>grid-auto-rows</strong>: <em>minmax(100px, auto);</em>
+  </p>
+  <h2>As many columns as will fit</h2>
+  <p>
+    Using the repeat and minmax functions it is possible to create as many columns as will fit inside 
+    the container.
+  </p>
+  <div class="container-grid container-gap container-auto-fill">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+  </div>
+  <h2>Line-based replacement</h2>
+  <div class="container-place-before">
+    <header>This is my lovely blog</header>
+    <article>
+      <h1>My article</h1>
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
+        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
+        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
+        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
+        Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
+        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
+        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
+        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+        mus.
+      </p>
+    </article>
+    <aside>
+      <h2>Other things</h2>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+        posuere sit amet dapibus ut, facilisis sed est.
+      </p>
+    </aside>
+    <footer>Contact me@mysite.com</footer>
+  </div>
+  <br>
+  <p>
+    The <strong>grid-row</strong> and <strong>grid-column</strong> allow you to place items on specific 
+    parts of the grid. Rows and columns are numbered from 1 to <var>n</var>.
+  </p>
+  <br>
+  <div class="container-place">
+    <header>This is my lovely blog</header>
+    <article>
+      <h1>My article</h1>
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
+        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
+        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
+        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
+        Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
+        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
+        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
+        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+        mus.
+      </p>
+    </article>
+    <aside>
+      <h2>Other things</h2>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+        posuere sit amet dapibus ut, facilisis sed est.
+      </p>
+    </aside>
+    <footer>Contact me@mysite.com</footer>
+  </div>
+  <h2>Positioning with grid template areas</h2>
+  <p>
+    The <strong>grid-template-areas</strong> and <strong>grid-area</strong> attributes allow for an alternative 
+    way to place items on your grid and giving the various elements of your design a name.<br>
+    Use <strong>grid-template-areas</strong> on the container to "draw" the layout and use 
+    <strong>grid-area</strong> on the items to match them with the elements inside the layout.
+  </p>
+  <div class="container-place-areas">
+    <header>This is my lovely blog</header>
+    <article>
+      <h1>My article</h1>
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
+        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
+        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
+        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
+        Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
+        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
+        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
+        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+        mus.
+      </p>
+    </article>
+    <aside>
+      <h2>Other things</h2>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+        posuere sit amet dapibus ut, facilisis sed est.
+      </p>
+    </aside>
+    <footer>Contact me@mysite.com</footer>
+  </div>
+  <br>
+  <p>Obs.: Grid frameworks tend to be based around 12 or 16 columns.</p>
 
 
 
