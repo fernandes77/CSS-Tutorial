@@ -627,3 +627,39 @@ img {
 .flow {
   display: flow-root;
 }
+
+.container-pos {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.container-pos > p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+.container-pos span {
+  background: red;
+  border: 1px solid black;
+}
+
+#relative-pos {
+  background: yellow;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+#absolute-pos {
+  background: yellow;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.container-absolute-pos {
+  position: relative;
+}

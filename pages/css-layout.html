@@ -688,6 +688,105 @@
       sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     </p>
   </div>
+  <br>
+  <h1>Positioning</h1>
+  <p>
+    Positioning allows you to take elements out of the normal document layout flow, and make them behave 
+    differently.
+  </p>
+  <div class="container-pos">
+    <h1>Basic document flow</h1>
+    <p>
+      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+    </p>
+    <p>
+      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
+      Our total width and height is our content + padding + border width/height.
+    </p>
+    <p>
+      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
+      margins, not both.
+    </p>
+    <p>
+      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
+      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
+      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
+      like this image will do: <img src="../imgs/long.jpg">
+    </p>
+  </div>
+  <h2>Introducing positioning</h2>
+  <ul>
+    <li><strong>position</strong>: <em>static</em> -- default positioning like the elements above;</li>
+    <li>
+      <strong>position</strong>: <em>relative</em> -- positioning relative to the static positioning. 
+      To move the object, use the <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> 
+      and <strong>right</strong> attributes:
+    </li>
+  </ul>
+  <div class="container-pos">
+    <h1>Basic document flow</h1>
+    <p>
+      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+    </p>
+    <p id="relative-pos">
+      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
+      Our total width and height is our content + padding + border width/height.
+    </p>
+    <p>
+      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
+      margins, not both.
+    </p>
+    <p>
+      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
+      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
+      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
+      like this image will do: <img src="../imgs/long.jpg">
+    </p>
+  </div>
+  <ul>
+    <li>
+      <strong>position</strong>: <em>absolute</em> -- positioning relative to the root (&lt;html&gt;) element. 
+      Note that this takes the element out of the normal layout flow.<br>
+      If the parent element has the <strong>position</strong>: <em>relative</em>; value, the children which 
+      have absolute positioning will be positioned in relation to the parent element's positioning:
+    </li>
+  </ul>
+  <div class="container-pos container-absolute-pos">
+    <h1>Basic document flow</h1>
+    <p>
+      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+    </p>
+    <p id="absolute-pos">
+      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
+      Our total width and height is our content + padding + border width/height.
+    </p>
+    <p>
+      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
+      margins, not both.
+    </p>
+    <p>
+      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
+      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
+      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
+      like this image will do: <img src="../imgs/long.jpg">
+    </p>
+  </div>
+  <p>
+    The <strong>z-index</strong> attribute defines what elements will be positioned over other elements. 
+    The higher the value, the "closer" it will be from your eyes.
+  </p>
+  <ul>
+    <li>
+      <strong>position</strong>: <em>fixed</em> -- positions an element in relation to the viewport. 
+      It will be fixed into your layout;
+    </li>
+    <li>
+      <strong>position</strong>: <em>sticky</em> -- same as fixed, except it won't fix until you scroll 
+      down enough.
+    </li>
+  </ul>
+
+
   
   
 
