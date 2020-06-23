@@ -548,6 +548,148 @@
   </div>
   <br>
   <p>Obs.: Grid frameworks tend to be based around 12 or 16 columns.</p>
+  <h1>Floats</h1>
+  <p>
+    The <strong>float</strong> property became one of the most commonly used tools for creating multiple column 
+    layouts on webpages.<br>
+    It accepts the values <em>left</em>, <em>right</em>, <em>inline-start</em> and <em>inline-end</em>.
+  </p>
+  <h2>Simple float example</h2>
+  <div class="container-box">
+    <div class="box">Float</div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
+      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+      at ultricies tellus laoreet sit amet.
+    </p>  
+    <p>
+      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
+      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
+      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
+      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
+      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
+      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
+      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+  </div>
+  <br>
+  <p>
+    You can push text away by adding margins to the float element but you cannot do that by adding margins 
+    to the text. This is because the float element is completely taken off the website's flow. The text content 
+    runs behind the float element.
+  </p>
+  <br>
+  <div class="container-box">
+    <div class="box">Float</div>
+    <p class="special">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
+      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+      at ultricies tellus laoreet sit amet.
+    </p>  
+    <p>
+      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
+      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
+      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
+      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
+      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
+      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
+      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+  </div>
+  <h2>Clearing floats</h2>
+  <p>
+    The <strong>clear</strong> attribute stops an element from wrapping around a float element. It accepts 
+    <em>left</em>, <em>right</em> or <em>both</em> as values.
+  </p>
+  <br>
+  <div class="container-box">
+    <div class="box">Float</div>
+    <p class="special">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
+      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+      at ultricies tellus laoreet sit amet.
+    </p>  
+    <p class="cleared">
+      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
+      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
+      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
+      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
+      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
+      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
+      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+  </div>
+  <h2>Clearing boxes wrapped around a float</h2>
+  <p>
+    If you wrap the floating element and the first paragraph around a div with a background color, this happens:
+  </p>
+  <br>
+  <div class="container-box">
+    <div class="wrap-box">
+      <div class="box">Float</div>
+      <p class="special">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
+        placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+        at ultricies tellus laoreet sit amet.
+      </p>
+    </div>
+    <p class="cleared">
+      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
+      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
+      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
+      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
+      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
+      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
+      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+  </div>
+  <br>
+  <p>
+    The <strong>display</strong>: <em>flow-root</em>; value makes the floating element go back to the normal 
+    flow without losing it's position.
+  </p>
+  <br>
+  <div class="container-box">
+    <div class="wrap-box flow">
+      <div class="box">Float</div>
+      <p class="special">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
+        placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+        at ultricies tellus laoreet sit amet.
+      </p>
+    </div>
+    <p class="cleared">
+      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
+      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
+      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
+      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
+      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
+      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
+      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
+      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
+  </div>
+  
+  
 
 
 
