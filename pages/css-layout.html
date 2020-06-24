@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>CSS Layout</title>
   </head>
 
@@ -1343,6 +1347,60 @@
       viewport to the device width, and scale the document to 100% of its
       intended size, which shows the document at the mobile-optimized size that
       you intended.
+    </p>
+    <h1>Guide to media queries</h1>
+    <p>
+      The CSS Media Query gives you a way to apply CSS only when the browser and
+      device environment matches a rule that you specify.
+    </p>
+    <h2>Media query syntax</h2>
+    <p>
+      The syntax looks like this:
+    </p>
+    <pre>
+      <code>
+        @media media-type and (media-feature-rule) {
+          /* CSS rules go here */
+        }
+      </code>
+    </pre>
+    <h2>Media types</h2>
+    <ul>
+      <li><strong>all</strong>;</li>
+      <li><strong>print</strong>: will apply if the page is printed;</li>
+      <li>
+        <strong>screen</strong>: will apply if the page is displayed on a
+        screen;
+      </li>
+      <li><strong>speech</strong>: will apply on speech synthesizers.</li>
+    </ul>
+    <h2>Media feature rules</h2>
+    <ul>
+      <li>
+        <strong>min-width</strong> and <strong>max-width</strong>: height is
+        also valid but not very useful;
+      </li>
+      <li>
+        <strong>orientation</strong>: <em>portrait</em> or <em>landscape</em>.
+      </li>
+      <li>
+        <strong>hover</strong>: determines if the user can hover over something
+        or not. Use <em>hover</em> or <em>none</em>.
+      </li>
+      <li>
+        <strong>pointer</strong>: determines the kind of pointer the user is
+        using. Use <em>fine</em> (mouse) or <em>coarse</em> (touch).
+      </li>
+    </ul>
+    <h2>Logic in media queries</h2>
+    <ul>
+      <li>Use <strong>and</strong> for the AND operator;</li>
+      <li>Use commas for the OR operator;</li>
+      <li>Use <strong>not</strong> for the NOT operator.</li>
+    </ul>
+    <p>
+      Obs.: Media queries are meant to be auxiliary. A responsive design can
+      probably be achieved by CSS grid/flexbox alone.
     </p>
   </body>
 </html>

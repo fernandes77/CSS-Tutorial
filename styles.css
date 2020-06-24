@@ -5,6 +5,39 @@
 
 html {
   line-height: 1.5;
+  font-family: 'PT Serif', serif;
+}
+
+body {
+  margin: 0;
+  padding: 32px;
+  border: 8px solid darkcyan;
+}
+
+h1 {
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+
+.index:link {
+  color: midnightblue;
+}
+
+.index:visited {
+  color: midnightblue;
+}
+
+.index:hover {
+  background: rgba(58, 58, 255, 0.137);
+}
+
+.index:focus {
+  background: rgba(58, 58, 255, 0.137);
+}
+
+.index:active {
+  background: midnightblue;
+  color: aliceblue;
 }
 
 .block-box {
