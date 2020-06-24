@@ -1268,5 +1268,81 @@
         </p>
       </div>
     </div>
+    <br />
+    <h1>Responsive design</h1>
+    <p>
+      As more diverse screen sizes became available, the concept of responsive
+      web design (RWD) appeared, a set of practices that allows web pages to
+      alter their layout and appearance to suit different screen widths,
+      resolutions, etc.
+    </p>
+    <h2>Media queries</h2>
+    <p>
+      Media queries allow us to run tests and alter our layout depending on the
+      characteristics of the device it is being rendered on.
+    </p>
+    <pre>
+      <code>
+        @media screen and (min-width: 800px) { 
+          .container { 
+            margin: 1em 2em; 
+          } 
+        }
+      </code>
+    </pre>
+    <h2>Flexible grids</h2>
+    <p>
+      Using flexible grids, you only need to alter your layout when it starts to
+      look bad. It is a legacy layout method.
+    </p>
+    <h2>Modern layout technologies</h2>
+    <ul>
+      <li>
+        Multicol: If <strong>column-count</strong> is used, the column width
+        will change accordingly. And vice-versa.
+      </li>
+      <li>
+        Flexbox: Flexbox items will shrink and grow according to the space in
+        their container. Change the proportions of each item using
+        <strong>flex</strong>.
+      </li>
+      <li>
+        CSS grid: The <em>fr</em> unit allows for distribution of available
+        space across grid tracks.
+      </li>
+    </ul>
+    <h2>Responsive images</h2>
+    <p>
+      The &lt;picture&gt; tag allows you to change how the image is displayed
+      depending on the size of the screen.
+    </p>
+    <h2>Responsive typography</h2>
+    <p>
+      A good approach is to use the viewport unit <em>vw</em> to enable
+      responsive typography. Use it in conjunction with <em>rem</em> with the
+      <em>calc()</em> function, like this:
+    </p>
+    <pre>
+      <code>
+        h1 {
+          font-size: calc(1.5rem + 3vw);
+        }
+      </code>
+    </pre>
+    <h2>The viewport meta tag</h2>
+    <p>
+      Always use the following meta tag:
+    </p>
+    <pre>
+      <code>
+        &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+      </code>
+    </pre>
+    <p>
+      This meta tag tells mobile browsers that they should set the width of the
+      viewport to the device width, and scale the document to 100% of its
+      intended size, which shows the document at the mobile-optimized size that
+      you intended.
+    </p>
   </body>
 </html>
