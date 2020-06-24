@@ -1,816 +1,1272 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS Layout</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css">
-  <title>CSS Layout</title>
-</head>
+  <body>
+    <h1>Flexbox</h1>
+    <p>
+      Flexbox is a one-dimensional layout method for laying out items in rows or
+      columns. Items flex to fill additional space and shrink to fit into
+      smaller spaces.
+    </p>
+    <header>
+      <h2>Sample flexbox example</h2>
+    </header>
 
-<body>
-  <h1>Flexbox</h1>
-  <p>
-    Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to
-    fill additional space and shrink to fit into smaller spaces.
-  </p>
-  <header>
-    <h2>Sample flexbox example</h2>
-  </header>
-
-  <section>
-    <article class="flex-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.</p>
-    </article>
-    <article class="flex-article">
-      <h2>Second article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-    </article>
-    <article class="flex-article">
-      <h2>Third article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-      <p>
-        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
-        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
-        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
-      </p>
-    </article>
-  </section>
-  <h2>Specifying what elements are laid out as flexible boxes</h2>
-  <p>
-    To lay each article as a flexible box, set the parent element's <strong>display</strong> attribute to
-    <em>flex</em>.
-  </p>
-  <section class="flex-section">
-    <article class="flex-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.</p>
-    </article>
-    <article class="flex-article">
-      <h2>Second article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-    </article>
-    <article class="flex-article">
-      <h2>Third article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-      <p>
-        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
-        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
-        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
-      </p>
-    </article>
-  </section>
-  <p>
-    Just like that, the boxes occupy the whole width of the parent and the height of the biggest content.
-  </p>
-  <h2>Columns or rows</h2>
-  <p>
-    The <strong>flex-direction</strong> attribute determines how the elements are laid out: row or column.<br>
-    The default value for it is <em>row</em>. Here's how it looks with a <em>column</em> value:
-  </p>
-  <section class="flex-section column-section">
-    <article class="flex-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.</p>
-    </article>
-    <article class="flex-article">
-      <h2>Second article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-    </article>
-    <article class="flex-article">
-      <h2>Third article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-      <p>
-        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
-        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
-        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
-      </p>
-    </article>
-  </section>
-  <p>
-    It goes back to it's original layout. You can also set the values <em>column-reverse</em> and
-    <em>row-reverse</em>.
-  </p>
-  <h2>Wrapping</h2>
-  <p>
-    Your flexbox items content might overflow the parent's width or height. The <strong>flex-wrap</strong>
-    attribute, when set to <em>wrap</em>, breaks the items into a new line whenever there is content overflow.<br>
-    You can also set <strong>flex</strong>: <em>200px</em> to the &lt;article&gt; elements to specify a minimum
-    width.
-  </p>
-  <section class="flex-section wrap-section">
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-    <article class="flex-article wrap-article">
-      <h2>First article</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones.
-      </p>
-    </article>
-  </section>
-  <h2>Flex flow</h2>
-  <p>There is a shorthand to specify direction and wrap. The <strong>flex-flow</strong> attribute:</p>
-  <p><strong>flex-flow</strong>: <em>row wrap</em>;</p>
-  <h2>Flexible sizing of items</h2>
-  <p>
-    Ýou can control the sizing of flex items when compared to other flex items.
-  </p>
-  <ul>
-    <li><strong>flex</strong>: <em>1</em> -- will occupy 1/n of the available space;</li>
-    <li>
-      <strong>flex</strong>: <em>2 150px</em> -- will occupy a minimum of 200px and then 2/n of the
-      available space.
-    </li>
-  </ul>
-  <section class="flex-section">
-    <article class="flex-article fraction-article">
-      <h2>First article (flex: 1)</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.</p>
-    </article>
-    <article class="flex-article fraction-article">
-      <h2>Second article (flex: 1)</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-    </article>
-    <article class="flex-article fraction-article-2">
-      <h2>Third article (flex: 2)</h2>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
-        carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
-        polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
-        booth health goth gastropub hammock.
-      </p>
-      <p>
-        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
-        8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
-        cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
-      </p>
-    </article>
-  </section>
-  <p>
-    Obs.: <strong>flex</strong> is a shorthand for <strong>flex-grow</strong> and <strong>flex-basis</strong>.
-  </p>
-  <h2>Horizontal and vertical alignment</h2>
-  <p>
-    The <strong>align-items</strong> and <strong>justify-content</strong> attributes align flex items.<br>
-    <strong>align-items</strong> controls the cross axis while <strong>justify-content</strong> controls the 
-    main axis.
-  </p>
-  <div class="contain-align">
-    <button class="align">Smile</button>
-    <button class="align">Laugh</button>
-    <button class="align">Wink</button>
-    <button class="align">Shrug</button>
-    <button class="align">Blush</button>
-  </div>
-  <span>{<strong>display</strong>: <em>flex</em>;}</span>
-  <ul>
-    <li><strong>align-items</strong>: <em>stretch</em> -- default value, occupies the container's height;</li>
-    <li>
-      <strong>align-items</strong>: <em>center</em> -- placed in the center vertically, occupies the content's 
-      height;
-    </li>
-    <li>
-      <strong>align-items</strong>: <em>flex-start</em>/<em>flex-end</em> -- puts the items up or down, 
-      respectively.
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <strong>justify-content</strong>: <em>flex-start</em> -- default value, makes items sit at the start 
-      of the main axis;
-    </li>
-    <li>
-      <strong>justify-content</strong>: <em>flex-end</em> -- makes items sit at the end of the main axis;
-    </li>
-    <li>
-      <strong>justify-content</strong>: <em>center</em> -- makes items sit at the center of the main axis;
-    </li>
-    <li>
-      <strong>justify-content</strong>: <em>space-around</em> -- will distribute all items evenly across 
-      the main axis, with a bit of space at the start and at the end;
-    </li>
-    <li>
-      <strong>justify-content</strong>: <em>space-between</em> -- will distribute all items evenly across 
-      the main axis, without space at the start or at the end.
-    </li>
-  </ul>
-  <div class="contain-align just-align">
-    <button class="align">Smile</button>
-    <button class="align">Laugh</button>
-    <button class="align">Wink</button>
-    <button class="align">Shrug</button>
-    <button class="align">Blush</button>
-  </div>
-  <span>
-    {<strong>display</strong>: <em>flex</em>; <strong>align-items</strong>: <em>center</em>; 
-    <strong>justify-content</strong>: <em>space-around</em>;}
-  </span>
-  <h2>Ordering flex items</h2>
-  <p>
-    The <strong>order</strong> attribute sets the order in which flex items are displayed. The default 
-    value is 0.<br>
-    The values can be negative too. If two items have the same value, they will follow the source code order.
-  </p>
-  <div class="contain-align just-align">
-    <button class="align order">Smile (order: 1)</button>
-    <button class="align order">Laugh</button>
-    <button class="align order">Wink</button>
-    <button class="align order">Shrug</button>
-    <button class="align order">Blush</button>
-  </div>
-  <span>
-    .order:first-child {<strong>order</strong>: <em>1</em>;}
-  </span>
-  <h1>Grids</h1>
-  <p>
-    CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and 
-    columns.
-  </p>
-  <h2>Defining a grid</h2>
-  <div class="container-grid">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  <p>
-    Declaring <strong>display</strong>: <em>grid</em>; will not change anything because it will just give you 
-    a one-column grid.<br>
-    Set <strong>grid-template-columns</strong>: <em>200px 200px 200px</em>; to make three 200px wide columns.
-  </p>
-  <div class="container-grid container-columns">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  <h2>Flexible grids with the fr unit</h2>
-  <p>
-    The <em>fr</em> unit allows the items to occupy a fraction of the container's available space.
-  </p>
-  <div class="container-grid container-columns-fr">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  Set <strong>grid-template-columns</strong>: <em>repeat(3, 1fr)</em> (for example) to write less code.
-  <h2>Gaps between tracks</h2>
-  <p>
-    The <strong>column-gap</strong> and <strong>row-gap</strong> (or just <strong>gap</strong>)
-    attributes allow you to add gaps between grid items.<br>
-  </p>
-  <div class="container-grid container-columns-fr container-gap">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  <h2>The implicit and explicit grid</h2>
-  <p>
-    When you set <strong>grid-template-columns</strong> or <strong>grid-template-rows</strong>, you are 
-    creating an explicit grid. When content is placed outside of that grid, the implicit grid is created.<br>
-    The implicit grid will be as large as the content in it. To determine a size for it, define  
-    <strong>grid-auto-rows</strong> or <strong>grid-auto-columns</strong> depending on which is implicit.
-  </p>
-  <div class="container-grid container-columns-fr container-gap container-implicit">
-    <div>One <br> Every row is now 100px tall.</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  <h2>The minmax function</h2>
-  <p>
-    The <em>minmax()</em> function allows you to set a minimum size for the implicit grid while also 
-    expanding it if there is content overflow.<br>
-    Set <strong>grid-auto-rows</strong>: <em>minmax(100px, auto);</em>
-  </p>
-  <h2>As many columns as will fit</h2>
-  <p>
-    Using the repeat and minmax functions it is possible to create as many columns as will fit inside 
-    the container.
-  </p>
-  <div class="container-grid container-gap container-auto-fill">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
-    <div>Six</div>
-    <div>Seven</div>
-  </div>
-  <h2>Line-based replacement</h2>
-  <div class="container-place-before">
-    <header>This is my lovely blog</header>
-    <article>
-      <h1>My article</h1>
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
-        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
-        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
-        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
-        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
-        Ut id ornare felis, eget fermentum sapien.
-      </p>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
-        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
-        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
-        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
-        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-        mus.
-      </p>
-    </article>
-    <aside>
-      <h2>Other things</h2>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-        posuere sit amet dapibus ut, facilisis sed est.
-      </p>
-    </aside>
-    <footer>Contact me@mysite.com</footer>
-  </div>
-  <br>
-  <p>
-    The <strong>grid-row</strong> and <strong>grid-column</strong> allow you to place items on specific 
-    parts of the grid. Rows and columns are numbered from 1 to <var>n</var>.
-  </p>
-  <br>
-  <div class="container-place">
-    <header>This is my lovely blog</header>
-    <article>
-      <h1>My article</h1>
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
-        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
-        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
-        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
-        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
-        Ut id ornare felis, eget fermentum sapien.
-      </p>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
-        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
-        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
-        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
-        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-        mus.
-      </p>
-    </article>
-    <aside>
-      <h2>Other things</h2>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-        posuere sit amet dapibus ut, facilisis sed est.
-      </p>
-    </aside>
-    <footer>Contact me@mysite.com</footer>
-  </div>
-  <h2>Positioning with grid template areas</h2>
-  <p>
-    The <strong>grid-template-areas</strong> and <strong>grid-area</strong> attributes allow for an alternative 
-    way to place items on your grid and giving the various elements of your design a name.<br>
-    Use <strong>grid-template-areas</strong> on the container to "draw" the layout and use 
-    <strong>grid-area</strong> on the items to match them with the elements inside the layout.
-  </p>
-  <div class="container-place-areas">
-    <header>This is my lovely blog</header>
-    <article>
-      <h1>My article</h1>
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies 
-        tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet 
-        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae 
-        convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros 
-        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. 
-        Ut id ornare felis, eget fermentum sapien.
-      </p>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis 
-        est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget 
-        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus 
-        sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
-        eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-        mus.
-      </p>
-    </article>
-    <aside>
-      <h2>Other things</h2>
-      <p>
-        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-        posuere sit amet dapibus ut, facilisis sed est.
-      </p>
-    </aside>
-    <footer>Contact me@mysite.com</footer>
-  </div>
-  <br>
-  <p>Obs.: Grid frameworks tend to be based around 12 or 16 columns.</p>
-  <h1>Floats</h1>
-  <p>
-    The <strong>float</strong> property became one of the most commonly used tools for creating multiple column 
-    layouts on webpages.<br>
-    It accepts the values <em>left</em>, <em>right</em>, <em>inline-start</em> and <em>inline-end</em>.
-  </p>
-  <h2>Simple float example</h2>
-  <div class="container-box">
-    <div class="box">Float</div>
+    <section>
+      <article class="flex-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Second article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Third article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <p>
+          Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
+          ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers
+          pickled, asymmetrical kombucha letterpress kitsch leggings
+          cold-pressed squid chartreuse put a bird on it. Listicle pickled man
+          bun cornhole heirloom art party.
+        </p>
+      </article>
+    </section>
+    <h2>Specifying what elements are laid out as flexible boxes</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
-      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
-      at ultricies tellus laoreet sit amet.
-    </p>  
+      To lay each article as a flexible box, set the parent element's
+      <strong>display</strong> attribute to <em>flex</em>.
+    </p>
+    <section class="flex-section">
+      <article class="flex-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Second article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Third article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <p>
+          Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
+          ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers
+          pickled, asymmetrical kombucha letterpress kitsch leggings
+          cold-pressed squid chartreuse put a bird on it. Listicle pickled man
+          bun cornhole heirloom art party.
+        </p>
+      </article>
+    </section>
     <p>
-      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
-      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
-      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+      Just like that, the boxes occupy the whole width of the parent and the
+      height of the biggest content.
     </p>
+    <h2>Columns or rows</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
-      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
-      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
-      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      The <strong>flex-direction</strong> attribute determines how the elements
+      are laid out: row or column.<br />
+      The default value for it is <em>row</em>. Here's how it looks with a
+      <em>column</em> value:
     </p>
-  </div>
-  <br>
-  <p>
-    You can push text away by adding margins to the float element but you cannot do that by adding margins 
-    to the text. This is because the float element is completely taken off the website's flow. The text content 
-    runs behind the float element.
-  </p>
-  <br>
-  <div class="container-box">
-    <div class="box">Float</div>
-    <p class="special">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
-      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
-      at ultricies tellus laoreet sit amet.
-    </p>  
+    <section class="flex-section column-section">
+      <article class="flex-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Second article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article">
+        <h2>Third article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <p>
+          Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
+          ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers
+          pickled, asymmetrical kombucha letterpress kitsch leggings
+          cold-pressed squid chartreuse put a bird on it. Listicle pickled man
+          bun cornhole heirloom art party.
+        </p>
+      </article>
+    </section>
     <p>
-      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
-      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
-      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+      It goes back to it's original layout. You can also set the values
+      <em>column-reverse</em> and <em>row-reverse</em>.
     </p>
+    <h2>Wrapping</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
-      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
-      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
-      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      Your flexbox items content might overflow the parent's width or height.
+      The <strong>flex-wrap</strong> attribute, when set to <em>wrap</em>,
+      breaks the items into a new line whenever there is content overflow.<br />
+      You can also set <strong>flex</strong>: <em>200px</em> to the
+      &lt;article&gt; elements to specify a minimum width.
     </p>
-  </div>
-  <h2>Clearing floats</h2>
-  <p>
-    The <strong>clear</strong> attribute stops an element from wrapping around a float element. It accepts 
-    <em>left</em>, <em>right</em> or <em>both</em> as values.
-  </p>
-  <br>
-  <div class="container-box">
-    <div class="box">Float</div>
-    <p class="special">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
-      placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
-      at ultricies tellus laoreet sit amet.
-    </p>  
-    <p class="cleared">
-      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
-      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
-      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
+    <section class="flex-section wrap-section">
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+      <article class="flex-article wrap-article">
+        <h2>First article</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones.
+        </p>
+      </article>
+    </section>
+    <h2>Flex flow</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
-      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
-      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
-      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      There is a shorthand to specify direction and wrap. The
+      <strong>flex-flow</strong> attribute:
     </p>
-  </div>
-  <h2>Clearing boxes wrapped around a float</h2>
-  <p>
-    If you wrap the floating element and the first paragraph around a div with a background color, this happens:
-  </p>
-  <br>
-  <div class="container-box">
-    <div class="wrap-box">
+    <p><strong>flex-flow</strong>: <em>row wrap</em>;</p>
+    <h2>Flexible sizing of items</h2>
+    <p>
+      Ýou can control the sizing of flex items when compared to other flex
+      items.
+    </p>
+    <ul>
+      <li>
+        <strong>flex</strong>: <em>1</em> -- will occupy 1/n of the available
+        space;
+      </li>
+      <li>
+        <strong>flex</strong>: <em>2 150px</em> -- will occupy a minimum of
+        200px and then 2/n of the available space.
+      </li>
+    </ul>
+    <section class="flex-section">
+      <article class="flex-article fraction-article">
+        <h2>First article (flex: 1)</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article fraction-article">
+        <h2>Second article (flex: 1)</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+      </article>
+      <article class="flex-article fraction-article-2">
+        <h2>Third article (flex: 2)</h2>
+        <p>
+          Tacos actually microdosing, pour-over semiotics banjo chicharrones
+          retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B
+          pork belly, everyday carry ennui pickled sriracha normcore hashtag
+          polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund
+          twee, leggings salvia iPhone photo booth health goth gastropub
+          hammock.
+        </p>
+        <p>
+          Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
+          ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers
+          pickled, asymmetrical kombucha letterpress kitsch leggings
+          cold-pressed squid chartreuse put a bird on it. Listicle pickled man
+          bun cornhole heirloom art party.
+        </p>
+      </article>
+    </section>
+    <p>
+      Obs.: <strong>flex</strong> is a shorthand for
+      <strong>flex-grow</strong> and <strong>flex-basis</strong>.
+    </p>
+    <h2>Horizontal and vertical alignment</h2>
+    <p>
+      The <strong>align-items</strong> and
+      <strong>justify-content</strong> attributes align flex items.<br />
+      <strong>align-items</strong> controls the cross axis while
+      <strong>justify-content</strong> controls the main axis.
+    </p>
+    <div class="contain-align">
+      <button class="align">Smile</button>
+      <button class="align">Laugh</button>
+      <button class="align">Wink</button>
+      <button class="align">Shrug</button>
+      <button class="align">Blush</button>
+    </div>
+    <span>{<strong>display</strong>: <em>flex</em>;}</span>
+    <ul>
+      <li>
+        <strong>align-items</strong>: <em>stretch</em> -- default value,
+        occupies the container's height;
+      </li>
+      <li>
+        <strong>align-items</strong>: <em>center</em> -- placed in the center
+        vertically, occupies the content's height;
+      </li>
+      <li>
+        <strong>align-items</strong>: <em>flex-start</em>/<em>flex-end</em> --
+        puts the items up or down, respectively.
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <strong>justify-content</strong>: <em>flex-start</em> -- default value,
+        makes items sit at the start of the main axis;
+      </li>
+      <li>
+        <strong>justify-content</strong>: <em>flex-end</em> -- makes items sit
+        at the end of the main axis;
+      </li>
+      <li>
+        <strong>justify-content</strong>: <em>center</em> -- makes items sit at
+        the center of the main axis;
+      </li>
+      <li>
+        <strong>justify-content</strong>: <em>space-around</em> -- will
+        distribute all items evenly across the main axis, with a bit of space at
+        the start and at the end;
+      </li>
+      <li>
+        <strong>justify-content</strong>: <em>space-between</em> -- will
+        distribute all items evenly across the main axis, without space at the
+        start or at the end.
+      </li>
+    </ul>
+    <div class="contain-align just-align">
+      <button class="align">Smile</button>
+      <button class="align">Laugh</button>
+      <button class="align">Wink</button>
+      <button class="align">Shrug</button>
+      <button class="align">Blush</button>
+    </div>
+    <span>
+      {<strong>display</strong>: <em>flex</em>; <strong>align-items</strong>:
+      <em>center</em>; <strong>justify-content</strong>: <em>space-around</em>;}
+    </span>
+    <h2>Ordering flex items</h2>
+    <p>
+      The <strong>order</strong> attribute sets the order in which flex items
+      are displayed. The default value is 0.<br />
+      The values can be negative too. If two items have the same value, they
+      will follow the source code order.
+    </p>
+    <div class="contain-align just-align">
+      <button class="align order">Smile (order: 1)</button>
+      <button class="align order">Laugh</button>
+      <button class="align order">Wink</button>
+      <button class="align order">Shrug</button>
+      <button class="align order">Blush</button>
+    </div>
+    <span> .order:first-child {<strong>order</strong>: <em>1</em>;} </span>
+    <h1>Grids</h1>
+    <p>
+      CSS Grid Layout is a two-dimensional layout system for the web. It lets
+      you lay content out in rows and columns.
+    </p>
+    <h2>Defining a grid</h2>
+    <div class="container-grid">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    <p>
+      Declaring <strong>display</strong>: <em>grid</em>; will not change
+      anything because it will just give you a one-column grid.<br />
+      Set <strong>grid-template-columns</strong>: <em>200px 200px 200px</em>; to
+      make three 200px wide columns.
+    </p>
+    <div class="container-grid container-columns">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    <h2>Flexible grids with the fr unit</h2>
+    <p>
+      The <em>fr</em> unit allows the items to occupy a fraction of the
+      container's available space.
+    </p>
+    <div class="container-grid container-columns-fr">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    Set <strong>grid-template-columns</strong>: <em>repeat(3, 1fr)</em> (for
+    example) to write less code.
+    <h2>Gaps between tracks</h2>
+    <p>
+      The <strong>column-gap</strong> and <strong>row-gap</strong> (or just
+      <strong>gap</strong>) attributes allow you to add gaps between grid
+      items.<br />
+    </p>
+    <div class="container-grid container-columns-fr container-gap">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    <h2>The implicit and explicit grid</h2>
+    <p>
+      When you set <strong>grid-template-columns</strong> or
+      <strong>grid-template-rows</strong>, you are creating an explicit grid.
+      When content is placed outside of that grid, the implicit grid is
+      created.<br />
+      The implicit grid will be as large as the content in it. To determine a
+      size for it, define
+      <strong>grid-auto-rows</strong> or
+      <strong>grid-auto-columns</strong> depending on which is implicit.
+    </p>
+    <div
+      class="container-grid container-columns-fr container-gap container-implicit"
+    >
+      <div>
+        One <br />
+        Every row is now 100px tall.
+      </div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    <h2>The minmax function</h2>
+    <p>
+      The <em>minmax()</em> function allows you to set a minimum size for the
+      implicit grid while also expanding it if there is content overflow.<br />
+      Set <strong>grid-auto-rows</strong>: <em>minmax(100px, auto);</em>
+    </p>
+    <h2>As many columns as will fit</h2>
+    <p>
+      Using the repeat and minmax functions it is possible to create as many
+      columns as will fit inside the container.
+    </p>
+    <div class="container-grid container-gap container-auto-fill">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+      <div>Six</div>
+      <div>Seven</div>
+    </div>
+    <h2>Line-based replacement</h2>
+    <div class="container-place-before">
+      <header>This is my lovely blog</header>
+      <article>
+        <h1>My article</h1>
+        <p>
+          Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+          porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+          auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+          orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+          ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+          volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+          eros pharetra congue. Duis ornare egestas augue ut luctus. Proin
+          blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+          eget fermentum sapien.
+        </p>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est. Nam id risus quis ante semper consectetur eget
+          aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+          suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+          urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt
+          eget purus in interdum. Cum sociis natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+      </article>
+      <aside>
+        <h2>Other things</h2>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est.
+        </p>
+      </aside>
+      <footer>Contact me@mysite.com</footer>
+    </div>
+    <br />
+    <p>
+      The <strong>grid-row</strong> and <strong>grid-column</strong> allow you
+      to place items on specific parts of the grid. Rows and columns are
+      numbered from 1 to <var>n</var>.
+    </p>
+    <br />
+    <div class="container-place">
+      <header>This is my lovely blog</header>
+      <article>
+        <h1>My article</h1>
+        <p>
+          Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+          porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+          auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+          orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+          ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+          volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+          eros pharetra congue. Duis ornare egestas augue ut luctus. Proin
+          blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+          eget fermentum sapien.
+        </p>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est. Nam id risus quis ante semper consectetur eget
+          aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+          suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+          urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt
+          eget purus in interdum. Cum sociis natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+      </article>
+      <aside>
+        <h2>Other things</h2>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est.
+        </p>
+      </aside>
+      <footer>Contact me@mysite.com</footer>
+    </div>
+    <h2>Positioning with grid template areas</h2>
+    <p>
+      The <strong>grid-template-areas</strong> and
+      <strong>grid-area</strong> attributes allow for an alternative way to
+      place items on your grid and giving the various elements of your design a
+      name.<br />
+      Use <strong>grid-template-areas</strong> on the container to "draw" the
+      layout and use <strong>grid-area</strong> on the items to match them with
+      the elements inside the layout.
+    </p>
+    <div class="container-place-areas">
+      <header>This is my lovely blog</header>
+      <article>
+        <h1>My article</h1>
+        <p>
+          Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+          porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+          auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+          orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+          ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+          volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+          eros pharetra congue. Duis ornare egestas augue ut luctus. Proin
+          blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+          eget fermentum sapien.
+        </p>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est. Nam id risus quis ante semper consectetur eget
+          aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+          suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+          urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt
+          eget purus in interdum. Cum sociis natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+      </article>
+      <aside>
+        <h2>Other things</h2>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est.
+        </p>
+      </aside>
+      <footer>Contact me@mysite.com</footer>
+    </div>
+    <br />
+    <p>Obs.: Grid frameworks tend to be based around 12 or 16 columns.</p>
+    <h1>Floats</h1>
+    <p>
+      The <strong>float</strong> property became one of the most commonly used
+      tools for creating multiple column layouts on webpages.<br />
+      It accepts the values <em>left</em>, <em>right</em>,
+      <em>inline-start</em> and <em>inline-end</em>.
+    </p>
+    <h2>Simple float example</h2>
+    <div class="container-box">
       <div class="box">Float</div>
-      <p class="special">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
-        placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
         at ultricies tellus laoreet sit amet.
       </p>
-    </div>
-    <p class="cleared">
-      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
-      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
-      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
-      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
-      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
-      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
-  </div>
-  <br>
-  <p>
-    The <strong>display</strong>: <em>flow-root</em>; value makes the floating element go back to the normal 
-    flow without losing it's position.
-  </p>
-  <br>
-  <div class="container-box">
-    <div class="wrap-box flow">
-      <div class="box">Float</div>
-      <p class="special">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem 
-        placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, 
-        at ultricies tellus laoreet sit amet.
+      <p>
+        Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit
+        amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque,
+        ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+        volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+        quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+        fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
       </p>
     </div>
-    <p class="cleared">
-      Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. 
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. 
-      Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue 
-      ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
+    <br />
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, 
-      posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. 
-      Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. 
-      Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum 
-      sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      You can push text away by adding margins to the float element but you
+      cannot do that by adding margins to the text. This is because the float
+      element is completely taken off the website's flow. The text content runs
+      behind the float element.
     </p>
-  </div>
-  <br>
-  <h1>Positioning</h1>
-  <p>
-    Positioning allows you to take elements out of the normal document layout flow, and make them behave 
-    differently.
-  </p>
-  <div class="container-pos">
-    <h1>Basic document flow</h1>
+    <br />
+    <div class="container-box">
+      <div class="box">Float</div>
+      <p class="special">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet.
+      </p>
+      <p>
+        Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit
+        amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque,
+        ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+        volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+        quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+        fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <h2>Clearing floats</h2>
     <p>
-      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+      The <strong>clear</strong> attribute stops an element from wrapping around
+      a float element. It accepts <em>left</em>, <em>right</em> or
+      <em>both</em> as values.
     </p>
+    <br />
+    <div class="container-box">
+      <div class="box">Float</div>
+      <p class="special">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet.
+      </p>
+      <p class="cleared">
+        Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit
+        amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque,
+        ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+        volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+        quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+        fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <h2>Clearing boxes wrapped around a float</h2>
     <p>
-      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
-      Our total width and height is our content + padding + border width/height.
+      If you wrap the floating element and the first paragraph around a div with
+      a background color, this happens:
     </p>
+    <br />
+    <div class="container-box">
+      <div class="wrap-box">
+        <div class="box">Float</div>
+        <p class="special">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet.
+        </p>
+      </div>
+      <p class="cleared">
+        Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit
+        amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque,
+        ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+        volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+        quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+        fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
     <p>
-      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
-      margins, not both.
+      The <strong>display</strong>: <em>flow-root</em>; value makes the floating
+      element go back to the normal flow without losing it's position.
     </p>
+    <br />
+    <div class="container-box">
+      <div class="wrap-box flow">
+        <div class="box">Float</div>
+        <p class="special">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet.
+        </p>
+      </div>
+      <p class="cleared">
+        Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit
+        amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque,
+        ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+        volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+        eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+        quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+        fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
+    <h1>Positioning</h1>
     <p>
-      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
-      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
-      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
-      like this image will do: <img src="../imgs/long.jpg">
+      Positioning allows you to take elements out of the normal document layout
+      flow, and make them behave differently.
     </p>
-  </div>
-  <h2>Introducing positioning</h2>
-  <ul>
-    <li><strong>position</strong>: <em>static</em> -- default positioning like the elements above;</li>
-    <li>
-      <strong>position</strong>: <em>relative</em> -- positioning relative to the static positioning. 
-      To move the object, use the <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> 
-      and <strong>right</strong> attributes:
-    </li>
-  </ul>
-  <div class="container-pos">
-    <h1>Basic document flow</h1>
+    <div class="container-pos">
+      <h1>Basic document flow</h1>
+      <p>
+        I am a basic block level element. My adjacent block level elements sit
+        on new lines below me.
+      </p>
+      <p>
+        By default we span 100% of the width of our parent element, and our are
+        as tall as our child content. Our total width and height is our content
+        + padding + border width/height.
+      </p>
+      <p>
+        We are separated by our margins. Because of margin collapsing, we are
+        separated by the width of one of our margins, not both.
+      </p>
+      <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit
+        on the same line as one another, and adjacent text nodes, if there is
+        space on the same line. Overflowing inline elements
+        <span
+          >wrap onto a new line if possible — like this one containing
+          text</span
+        >, or just go on to a new line if not, much like this image will do:
+        <img src="../imgs/long.jpg" />
+      </p>
+    </div>
+    <h2>Introducing positioning</h2>
+    <ul>
+      <li>
+        <strong>position</strong>: <em>static</em> -- default positioning like
+        the elements above;
+      </li>
+      <li>
+        <strong>position</strong>: <em>relative</em> -- positioning relative to
+        the static positioning. To move the object, use the
+        <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> and
+        <strong>right</strong> attributes:
+      </li>
+    </ul>
+    <div class="container-pos">
+      <h1>Basic document flow</h1>
+      <p>
+        I am a basic block level element. My adjacent block level elements sit
+        on new lines below me.
+      </p>
+      <p id="relative-pos">
+        By default we span 100% of the width of our parent element, and our are
+        as tall as our child content. Our total width and height is our content
+        + padding + border width/height.
+      </p>
+      <p>
+        We are separated by our margins. Because of margin collapsing, we are
+        separated by the width of one of our margins, not both.
+      </p>
+      <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit
+        on the same line as one another, and adjacent text nodes, if there is
+        space on the same line. Overflowing inline elements
+        <span
+          >wrap onto a new line if possible — like this one containing
+          text</span
+        >, or just go on to a new line if not, much like this image will do:
+        <img src="../imgs/long.jpg" />
+      </p>
+    </div>
+    <ul>
+      <li>
+        <strong>position</strong>: <em>absolute</em> -- positioning relative to
+        the root (&lt;html&gt;) element. Note that this takes the element out of
+        the normal layout flow.<br />
+        If the parent element has the <strong>position</strong>:
+        <em>relative</em>; value, the children which have absolute positioning
+        will be positioned in relation to the parent element's positioning:
+      </li>
+    </ul>
+    <div class="container-pos container-absolute-pos">
+      <h1>Basic document flow</h1>
+      <p>
+        I am a basic block level element. My adjacent block level elements sit
+        on new lines below me.
+      </p>
+      <p id="absolute-pos">
+        By default we span 100% of the width of our parent element, and our are
+        as tall as our child content. Our total width and height is our content
+        + padding + border width/height.
+      </p>
+      <p>
+        We are separated by our margins. Because of margin collapsing, we are
+        separated by the width of one of our margins, not both.
+      </p>
+      <p>
+        inline elements <span>like this one</span> and <span>this one</span> sit
+        on the same line as one another, and adjacent text nodes, if there is
+        space on the same line. Overflowing inline elements
+        <span
+          >wrap onto a new line if possible — like this one containing
+          text</span
+        >, or just go on to a new line if not, much like this image will do:
+        <img src="../imgs/long.jpg" />
+      </p>
+    </div>
     <p>
-      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+      The <strong>z-index</strong> attribute defines what elements will be
+      positioned over other elements. The higher the value, the "closer" it will
+      be from your eyes.
     </p>
-    <p id="relative-pos">
-      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
-      Our total width and height is our content + padding + border width/height.
-    </p>
+    <ul>
+      <li>
+        <strong>position</strong>: <em>fixed</em> -- positions an element in
+        relation to the viewport. It will be fixed into your layout;
+      </li>
+      <li>
+        <strong>position</strong>: <em>sticky</em> -- same as fixed, except it
+        won't fix until you scroll down enough.
+      </li>
+    </ul>
+    <h1>Multiple-column layout</h1>
     <p>
-      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
-      margins, not both.
+      The multiple-column layout specification gives you a method of laying
+      content out in columns.
     </p>
+    <h2>A basic example</h2>
     <p>
-      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
-      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
-      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
-      like this image will do: <img src="../imgs/long.jpg">
+      This is how to use multiple-column layout, often referred to as multicol.
     </p>
-  </div>
-  <ul>
-    <li>
-      <strong>position</strong>: <em>absolute</em> -- positioning relative to the root (&lt;html&gt;) element. 
-      Note that this takes the element out of the normal layout flow.<br>
-      If the parent element has the <strong>position</strong>: <em>relative</em>; value, the children which 
-      have absolute positioning will be positioned in relation to the parent element's positioning:
-    </li>
-  </ul>
-  <div class="container-pos container-absolute-pos">
-    <h1>Basic document flow</h1>
+    <div class="container-column">
+      <h1>Simple multicol example</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+        Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+        ligula.Curabitur vehicula tellus neque, ac ornare ex malesuada et. In
+        vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+        turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+        egestas augue ut luctus. Proin blanditquam nec lacus varius commodo et a
+        urna. Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
     <p>
-      I am a basic block level element. My adjacent block level elements sit on new lines below me.
+      The <strong>column-count</strong> and
+      <strong>column-width</strong> attributes sets the layout or the columns.
+      Use one or the other.<br />
+      The column count is set to <em>5</em> on the next div. On the one after
+      that, the column width is set to <em>200px</em>.
     </p>
-    <p id="absolute-pos">
-      By default we span 100% of the width of our parent element, and our are as tall as our child content. 
-      Our total width and height is our content + padding + border width/height.
-    </p>
+    <div class="container-column container-set-count">
+      <h1>Simple multicol example</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+        Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+        ligula.Curabitur vehicula tellus neque, ac ornare ex malesuada et. In
+        vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+        turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+        egestas augue ut luctus. Proin blanditquam nec lacus varius commodo et a
+        urna. Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
+    <div class="container-column container-set-width">
+      <h1>Simple multicol example</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+        Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+        ligula.Curabitur vehicula tellus neque, ac ornare ex malesuada et. In
+        vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+        turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+        egestas augue ut luctus. Proin blanditquam nec lacus varius commodo et a
+        urna. Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
+    <h2>Styling the columns</h2>
     <p>
-      We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our 
-      margins, not both.
+      The <strong>column-gap</strong> and
+      <strong>column-rule</strong> attributes add a little bit of style to the
+      layout.
     </p>
+    <div class="container-column container-set-count container-column-style">
+      <h1>Simple multicol example</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+        Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+        ligula.Curabitur vehicula tellus neque, ac ornare ex malesuada et. In
+        vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+        turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+        egestas augue ut luctus. Proin blanditquam nec lacus varius commodo et a
+        urna. Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
+    <h2>Spanning columns</h2>
     <p>
-      inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, 
-      and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto 
-      a new line if possible — like this one containing text</span>, or just go on to a new line if not, much 
-      like this image will do: <img src="../imgs/long.jpg">
+      The <strong>column-span</strong> attribute allows you to span an element
+      across all columns.
     </p>
-  </div>
-  <p>
-    The <strong>z-index</strong> attribute defines what elements will be positioned over other elements. 
-    The higher the value, the "closer" it will be from your eyes.
-  </p>
-  <ul>
-    <li>
-      <strong>position</strong>: <em>fixed</em> -- positions an element in relation to the viewport. 
-      It will be fixed into your layout;
-    </li>
-    <li>
-      <strong>position</strong>: <em>sticky</em> -- same as fixed, except it won't fix until you scroll 
-      down enough.
-    </li>
-  </ul>
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
+    <div class="container-column container-set-count container-column-style">
+      <h1>Simple multicol example</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+        aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+        pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+        at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+        Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+        ligula.Curabitur vehicula tellus neque, ac ornare ex malesuada et. In
+        vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+        turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+        egestas augue ut luctus. Proin blanditquam nec lacus varius commodo et a
+        urna. Ut id ornare felis, eget fermentum sapien.
+      </p>
+      <p class="column-span">
+        Lorem ipsum dolor sit amet.
+      </p>
+      <p>
+        Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+        malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+        facilisis sed est. Nam id risus quis ante semper consectetur eget
+        aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit
+        vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget
+        velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus
+        in interdum. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      </p>
+    </div>
+    <br />
+    <h2>Columns and fragmentation</h2>
+    <p>
+      When you turn your content into a multicol container it is fragmented into
+      columns, and the content breaks to allow this to happen. Sometimes, this
+      breaking will negatively affect the reading experience.
+    </p>
+    <div class="container-frag">
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+    </div>
+    <br />
+    <p>
+      The <strong>break-inside</strong> attribute prevents this from happening.
+      Setting it to <em>avoid</em> leads to this:
+    </p>
+    <div class="container-frag">
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+      <div class="card card-break-avoid">
+        <h2>I am the heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+          aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+          pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet
+          nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at
+          porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+          egestas ligula.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
