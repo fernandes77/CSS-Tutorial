@@ -7,14 +7,24 @@
   <title>Building Blocks</title>
   <link rel="stylesheet" href="../styles.css">
   <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-  <link
-      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-  <h1>Cascade and Inheritance</h1>
+  <h1 class="first-h1">CSS Building Blocks</h1>
+  <p><a class="index" href="#cascade">Cascade and inheritance</a></p>
+  <p><a class="index" href="#selectors">Selectors</a></p>
+  <p><a class="index" href="#box-model">The box model</a></p>
+  <p><a class="index" href="#bgs-borders">Backgrounds and borders</a></p>
+  <p><a class="index" href="#text-direction">Text directions</a></p>
+  <p><a class="index" href="#overflowing">Overflowing content</a></p>
+  <p><a class="index" href="#values">CSS values and units</a></p>
+  <p><a class="index" href="#sizing">Sizing items in CSS</a></p>
+  <p><a class="index" href="#media">Images, media and form elements</a></p>
+  <p><a class="index" href="#tables">Styling tables</a></p>
+  <br><hr><br>
+  <h1 id="cascade">Cascade and inheritance</h1>
   <h2>Cascade</h2> If two rules are equal, the one that comes last is applied.
   <h2>Specificity</h2> The rule is applied if it is the most specific to that element.
   <h2>Inheritance</h2> Some properties set on parent elements are inherited by their child elements,
@@ -23,7 +33,7 @@
   <p><strong>initial:</strong> Turns inheritance off.</p>
   <p><strong>unset:</strong> Resets to it's natural value, whether that is inherit or initial.</p><br>
 
-  <h1>Selectors</h1>
+  <h1 id="selectors">Selectors</h1>
   <h2>Type, class and ID</h2> This group includes selectors that target an HTML element.<br>
   Examples: h1{}, .a-class{}, #some-id{}.
   <h2>Attribute</h2> This group of selectors selects elements based on the presence of a
@@ -45,7 +55,7 @@
   <h2>General sibling</h2> Same as the adjacent sibling combinator, but without the "immediately" part.<br>
   Example: img ~ p{}.
   <br><br>
-  <h1>The box model</h1>
+  <h1 id="box-model">The box model</h1>
   <h2>Block boxes</h2>
   <ul>
     <li>Will break onto a new line;</li>
@@ -122,7 +132,7 @@
     <li>The width and height properties are respected;</li>
     <li>Vertical padding, borders and margins will push other elements away.</li>
   </ul>
-  <h1>Backgrounds and borders</h1>
+  <h1 id="bgs-borders">Backgrounds and borders</h1>
   <h2>Background color</h2>
   <p>
     The <strong>background-color</strong> attribute gives the element's background a color,
@@ -176,7 +186,7 @@
     <li><strong>background-attachment</strong>: <em>fixed</em> -- does not scroll;</li>
     <li><strong>background-attachment</strong>: <em>local</em> -- scrolls with the page, but not the element.</li>
   </ul>
-  <h1>Text directions</h1>
+  <h1 id="text-directions">Text directions</h1>
   <h2>Writing modes</h2>
   <p>
     The <strong>writing-mode</strong> attribute allows for different writing directions.
@@ -191,23 +201,23 @@
   <div class="wrt-mode ver-lr">Lorem ipsum dolor sit amet</div>
   <h2>Width and height</h2>
   <p>
-    Width and height can be set based on the <strong>writing-mode</strong>. For that, just use the 
+    Width and height can be set based on the <strong>writing-mode</strong>. For that, just use the
     <strong>inline-size</strong> and <strong>block-size</strong> attributes.
   </p>
   <div class="wrt-mode wrt-size hor">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode wrt-size ver-rl">Lorem ipsum dolor sit amet</div>
   <h2>Logical values</h2>
   <p>
-    Top, right, left and bottom values can also be set based on the <strong>writing-mode</strong>. 
-    Use the <strong>block-start</strong>, <strong>inline-end</strong>, <strong>block-end</strong> 
+    Top, right, left and bottom values can also be set based on the <strong>writing-mode</strong>.
+    Use the <strong>block-start</strong>, <strong>inline-end</strong>, <strong>block-end</strong>
     and <strong>inline-start</strong> attributes.
   </p>
   <div class="wrt-mode hor log-vals">Lorem ipsum dolor sit amet</div>
   <div class="wrt-mode ver-rl log-vals">Lorem ipsum dolor sit amet</div>
-  <h1>Overflowing content</h1>
+  <h1 id="overflowing">Overflowing content</h1>
   <h2>Overflow</h2>
   <p>
-    Content you put inside a box may be too big to fit inside it. The <strong>overflow</strong> attribute 
+    Content you put inside a box may be too big to fit inside it. The <strong>overflow</strong> attribute
     determines what to do in this situation.
   </p>
   <ul>
@@ -216,7 +226,7 @@
     <li><strong>overflow:</strong> <em>auto</em> -- if the content overflows, adds scroll bars;</li>
     <li><strong>overflow-x</strong> and <strong>overflow-y</strong> can also be used.</li>
   </ul>
-  <h1>CSS values and units</h1>
+  <h1 id="values">CSS values and units</h1>
   <h2>Data types</h2>
   <p>CSS has 4 data types:</p>
   <ul>
@@ -237,25 +247,32 @@
       </thead>
       <tbody>
         <tr>
-          <td>cm</td> <td>Centimeters</td>
+          <td>cm</td>
+          <td>Centimeters</td>
         </tr>
         <tr>
-          <td>mm</td> <td>Millimeters</td>
+          <td>mm</td>
+          <td>Millimeters</td>
         </tr>
         <tr>
-          <td>Q</td> <td>Quarter-millimeters</td>
+          <td>Q</td>
+          <td>Quarter-millimeters</td>
         </tr>
         <tr>
-          <td>in</td> <td>Inches</td>
+          <td>in</td>
+          <td>Inches</td>
         </tr>
         <tr>
-          <td>pc</td> <td>Picas</td>
+          <td>pc</td>
+          <td>Picas</td>
         </tr>
         <tr>
-          <td>pt</td> <td>Points</td>
+          <td>pt</td>
+          <td>Points</td>
         </tr>
         <tr>
-          <td>px</td> <td>Pixels</td>
+          <td>px</td>
+          <td>Pixels</td>
         </tr>
       </tbody>
     </table>
@@ -270,25 +287,32 @@
       </thead>
       <tbody>
         <tr>
-          <td>em</td> <td>Font size of the parent, in the case of typographical properties.</td>
+          <td>em</td>
+          <td>Font size of the parent, in the case of typographical properties.</td>
         </tr>
         <tr>
-          <td>ex</td> <td>x-height of the element's font.</td>
+          <td>ex</td>
+          <td>x-height of the element's font.</td>
         </tr>
         <tr>
-          <td>rem</td> <td>Font size of the root (html) element.</td>
+          <td>rem</td>
+          <td>Font size of the root (html) element.</td>
         </tr>
         <tr>
-          <td>vw</td> <td>1% of the viewport's width.</td>
+          <td>vw</td>
+          <td>1% of the viewport's width.</td>
         </tr>
         <tr>
-          <td>vh</td> <td>1% of the viewport's height.</td>
+          <td>vh</td>
+          <td>1% of the viewport's height.</td>
         </tr>
         <tr>
-          <td>vmin</td> <td>1% of the viewport's smaller dimension.</td>
+          <td>vmin</td>
+          <td>1% of the viewport's smaller dimension.</td>
         </tr>
         <tr>
-          <td>vmax</td> <td>1% of the viewport's larger dimension.</td>
+          <td>vmax</td>
+          <td>1% of the viewport's larger dimension.</td>
         </tr>
       </tbody>
     </table>
@@ -302,13 +326,13 @@
   </ul>
   <h2>Images</h2>
   <p>
-    The &lt;image&gt; data type is used wherever an image is a valid value. This can be an actual image file 
+    The &lt;image&gt; data type is used wherever an image is a valid value. This can be an actual image file
     pointed to via a url() function, or a gradient.
   </p>
   <h2>Position</h2>
   <p>
-    The &lt;position&gt; data type represents a set of 2D coordinates, used to position an item. A typical 
-    position value consists of two values — the first sets the position horizontally, the second vertically. 
+    The &lt;position&gt; data type represents a set of 2D coordinates, used to position an item. A typical
+    position value consists of two values — the first sets the position horizontally, the second vertically.
     <br>If you only specify values for one axis the other will default to <em>center</em>.
   </p>
   <h2>Strings and identifiers</h2>
@@ -318,32 +342,32 @@
   </p>
   <h2>Functions</h2>
   <p>
-    In programming, a function is a reusable section of code that can be run multiple times to complete a 
+    In programming, a function is a reusable section of code that can be run multiple times to complete a
     repetitive task. Some examples are url("img.jpg") and calc(50% + 8px).
   </p>
-  <h1>Sizing items in CSS</h1>
+  <h1 id="sizing">Sizing items in CSS</h1>
   <h2>Minimum and maximum sizes: min- and max-</h2>
   <p>
-    You can ask CSS to give an element a minimum or a maximum size, using <strong>min-</strong> and 
+    You can ask CSS to give an element a minimum or a maximum size, using <strong>min-</strong> and
     <strong>max-</strong>.<br>
     This is useful for preventing content overflow while having a defined height or width.
   </p>
   <div class="min-max"></div>
-  <div class="min-max"> 
-    These boxes both have a min-height set, this box has content in it which will need more space than the 
+  <div class="min-max">
+    These boxes both have a min-height set, this box has content in it which will need more space than the
     assigned height, and so it grows from the minimum.
   </div>
   <h2>Viewport units</h2>
   <p>
-    The viewport — which is the visible area of your page in the browser you are using to view a site — 
-    also has a size. In CSS there is the <em>vw</em> unit for viewport width, and <em>vh</em> for viewport 
+    The viewport — which is the visible area of your page in the browser you are using to view a site —
+    also has a size. In CSS there is the <em>vw</em> unit for viewport width, and <em>vh</em> for viewport
     height. <br>Using these units you can size something relative to the viewport of the user.
   </p>
   <div class="viewport">Scale your window's width</div>
-  <h1>Images, media and form elements</h1>
+  <h1 id="media">Images, media and form elements</h1>
   <h2>Sizing images</h2>
   <p>
-    Images can be sized with their aspect ratio maintained using the <strong>object-fit</strong> 
+    Images can be sized with their aspect ratio maintained using the <strong>object-fit</strong>
     attribute.
   </p>
   <ul>
@@ -358,9 +382,9 @@
   </div>
   <h2>Form elements reset</h2>
   <p>
-    Form elements can be a tricky issue when it comes to styling with CSS. They will most likely look 
+    Form elements can be a tricky issue when it comes to styling with CSS. They will most likely look
     different when displayed in different browsers. Therefore, there is a reset for them:
-    <pre>
+  <pre>
       <code>
         button, 
         input, 
@@ -379,7 +403,7 @@
       </code>
     </pre>
   </p>
-  <h1>Styling tables</h1>
+  <h1 id="tables">Styling tables</h1>
   <h2>A typical HTML table</h2>
   <p>This is a typical HTML table:</p>
   <table>
@@ -513,7 +537,7 @@
   <p>Now, customise the colors, customise the caption and add a bit more style.</p>
   <ul>
     <li>
-      The :nth-child selector accepts the <em>odd</em> and <em>even</em> keywords. You can use that to 
+      The :nth-child selector accepts the <em>odd</em> and <em>even</em> keywords. You can use that to
       give your rows two alternating colors;
     </li>
     <li><strong>caption-side</strong>: <em>bottom</em> -- the caption goes to the bottom of the table.</li>

@@ -40,6 +40,10 @@ h1 {
   color: aliceblue;
 }
 
+.first-h1 {
+  font-size: 48px;
+}
+
 .block-box {
   display: block;
   background-color: blue;
